@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/new/images"/>
+    <qresource prefix="/img"/>
+    <qresource prefix="/">
+        <file>images/button.png</file>
+        <file>images/dep.png</file>
+        <file>images/login2.png</file>
+        <file>images/rev.png</file>
+        <file>images/revb.png</file>
+        <file>images/depb.png</file>
+        <file>images/crud1.png</file>
+        <file>images/crud.png</file>
+        <file>images/logo.png</file>
+        <file>images/BACKGALL.png</file>
+        <file>images/newtab.png</file>
+        <file>images/WHITE.png</file>
+        <file>images/act.png</file>
+        <file>images/ajout.png</file>
+        <file>images/mod.png</file>
+        <file>images/supp.png</file>
+        <file>images/mute.png</file>
+        <file>images/unmute.png</file>
+        <file>images/music.mp3</file>
+    </qresource>
+</RCC>
