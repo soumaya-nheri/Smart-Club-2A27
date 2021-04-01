@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include<QDate>
+#include<depenses.h>
+#include<comptabilite.h>
 namespace Ui {
 class modifier_dep;
 }
@@ -23,11 +25,13 @@ public:
 private slots:
     void on_mod_dep_clicked();
 
+
 private:
     Ui::modifier_dep *ui;
     int ID_DEP;
     float ACHAT,SALAIRE,EVENT;
     QDate DATE_DEP;
+
 
 };
 

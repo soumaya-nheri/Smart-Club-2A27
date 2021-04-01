@@ -42,6 +42,28 @@ private slots:
 
     void on_pushButton_6_clicked();
 
+
+
+    void on_print_clicked();
+
+    void on_comboBox_currentIndexChanged(int index);
+
+    void on_comboBox_2_currentIndexChanged(int index);
+
+
+
+    void on_somme_consomation_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_somme_rev_abon_clicked();
+
+    void on_somme_rev_sponsor_clicked();
+
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_9_clicked();
+
 private:
 
     Ui::comptabilite *ui;

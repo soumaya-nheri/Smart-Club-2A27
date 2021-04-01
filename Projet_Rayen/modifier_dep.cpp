@@ -2,6 +2,7 @@
 #include "ui_modifier_dep.h"
 #include"depenses.h"
 #include<QMessageBox>
+#include<QDebug>
 
 modifier_dep::modifier_dep(QWidget *parent) :
     QDialog(parent),
@@ -15,7 +16,6 @@ modifier_dep::modifier_dep(QWidget *parent) :
       ui->EVENT2->setValidator(dv);
 
 }
-
 modifier_dep::~modifier_dep()
 {
     delete ui;
@@ -30,6 +30,11 @@ QString ACHAT_String=QString::number(ACHAT);
 
    ui->ACHAT2->setText(ACHAT_String);
 }
+/*
+void affichclient::setnom(QString a){
+    ui->Nom->setText(a);
+}
+ */
 void modifier_dep::setSALAIRE(float SALAIRE){
 QString SALAIRE_String=QString::number(SALAIRE);
 

@@ -21,5 +21,8 @@
         <file>images/mute.png</file>
         <file>images/unmute.png</file>
         <file>images/music.mp3</file>
+        <file>images/REF.png</file>
+        <file>images/print.png</file>
+        <file>images/stt.png</file>
     </qresource>
 </RCC>
