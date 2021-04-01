@@ -63,3 +63,29 @@ bool equipements::supprimer(int){
 
 }
 
+bool equipements::modifier(int id_equipement)
+{
+    QSqlQuery query;
+
+
+    query.prepare("UPDATE equipements set marque=:marque,model=:model,prix=:prix,etat=:etat,disponibilite=:disponibilite where id_equipement=:id_equipement ");
+    query.bindValue(":id_equipement",id_equipement);
+    query.bindValue(":marque",marque);
+    query.bindValue(":model",model);
+    query.bindValue(":prix",prix);
+    query.bindValue(":etat",etat);
+    query.bindValue(":disponibilite",disponibilite);
+    return query.exec();
+
+}
+
+QSqlQueryModel* equipements::affid_eq(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM equipements");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("Identifiant"));
+
+
+
+
+    return model;
+}

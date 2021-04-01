@@ -1,6 +1,14 @@
 QT       += core gui sql
+QT       += printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+QT       += charts
+
+
+QT += network
+QT += multimedia multimediawidgets
+
 
 CONFIG += c++11
 
@@ -17,21 +25,48 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connection.cpp \
+    dialog.cpp \
     equipements.cpp \
     main.cpp \
     mainwindow.cpp \
+    modifier.cpp \
+    modifiers.cpp \
+    qcustomplot.cpp \
     services.cpp
 
 HEADERS += \
     connection.h \
+    dialog.h \
     equipements.h \
     mainwindow.h \
+    modifier.h \
+    modifiers.h \
+    qcustomplot.h \
     services.h
 
 FORMS += \
-    mainwindow.ui
+    dialog.ui \
+    mainwindow.ui \
+    modifier.ui \
+    modifiers.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    resources.qrc
+
+DISTFILES += \
+    ../../Desktop/projet photos/stats.png \
+    ../../Desktop/projet photos/white.png \
+    images/2.png \
+    images/4.png \
+    images/act.png \
+    images/ajout.png \
+    images/modif.png \
+    images/pdf.png \
+    images/stats.png \
+    images/supp.png \
+    images/white.png
