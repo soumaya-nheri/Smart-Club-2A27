@@ -1,6 +1,6 @@
 #include "modifier.h"
-#include "revenues.h"
-#include "ui_modifier.h"
+#include "coach.h"
+
 #include"QMessageBox"
 
 

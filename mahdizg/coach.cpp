@@ -76,3 +76,13 @@ coach::coach()
         return query.exec();
 
 }
+    QSqlQueryModel * coach ::chercher(QString word)
+    {
+
+        QSqlQueryModel * model= new QSqlQueryModel();
+        QString p= "select * from coach where ID_Coach like '%"+word+"%' or Nom like '%"+word+"%' or Prenom like '%"+word+"%' or Specialite like '%"+word+"%'";
+        model->setQuery(p);
+        return model;
+
+
+    }

@@ -31,6 +31,7 @@ public:
     QSqlQueryModel* Afficher2();
     bool Supprimer2(int);
     bool Modifier2(int);
+    QSqlQueryModel* chercher(QString);
 
 private:
 int ID_Planning,Numero_Sem,NB_reservation;

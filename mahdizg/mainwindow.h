@@ -17,14 +17,11 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_Ajouter1_clicked();
 
-    void on_Supprimer1_clicked();
-
-    void on_Afficher1_clicked();
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
-    coach re1;
+
 };
 #endif // MAINWINDOW_H

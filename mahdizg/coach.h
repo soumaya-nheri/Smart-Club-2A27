@@ -29,6 +29,7 @@ public:
     QSqlQueryModel* Afficher1();
     bool Supprimer1(int);
     bool Modifier1(int);
+    QSqlQueryModel* chercher(QString);
 
 private:
 int ID_Coach;
