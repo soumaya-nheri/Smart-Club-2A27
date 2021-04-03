@@ -54,10 +54,26 @@ QSqlQueryModel* services::afficher(){
 bool services::supprimer(int){
 
     QSqlQuery query;
-          query.prepare("Delete from equipements where id_service=:id_service");
+          query.prepare("Delete from services where id_service=:id_service");
           query.bindValue(0, id_service);
 
         return  query.exec();
 
 
 }
+
+bool services::modifier(int id_service)
+{
+    QSqlQuery query;
+
+
+    query.prepare("UPDATE services set nom_service=:nom_service,nbre_materiel=:nbre_materiel,type=:type where id_service=:id_service ");
+    query.bindValue(":id_service",id_service);
+    query.bindValue(":nom_service",nom_service);
+    query.bindValue(":nbre_materiel",nbre_materiel);
+    query.bindValue(":type",type);
+
+    return query.exec();
+
+}
+

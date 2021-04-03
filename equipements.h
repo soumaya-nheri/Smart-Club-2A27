@@ -23,6 +23,8 @@ public:
     bool ajouter();
     QSqlQueryModel* afficher();
     bool supprimer(int);
+    bool modifier(int);
+    QSqlQueryModel* affid_eq();
 private:
     int id_equipement;
     QString marque,model,prix,etat,disponibilite;
