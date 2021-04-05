@@ -1,12 +1,15 @@
 <RCC>
     <qresource prefix="/">
-        <file>images/2.png</file>
-        <file>images/4.png</file>
         <file>images/act.png</file>
         <file>images/ajout.png</file>
         <file>images/modif.png</file>
         <file>images/supp.png</file>
         <file>images/pdf.png</file>
         <file>images/stats.png</file>
+        <file>images/login.png</file>
+        <file>images/front2.png</file>
+        <file>images/back2.png</file>
+        <file>images/Drake - Whats Next.mp3</file>
+        <file>images/white.png</file>
     </qresource>
 </RCC>

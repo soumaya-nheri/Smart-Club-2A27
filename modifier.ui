@@ -14,7 +14,8 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">border-image:url(:/images/4.png)</string>
+   <string notr="true">
+border-image: url(:/images/back2.png);</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">

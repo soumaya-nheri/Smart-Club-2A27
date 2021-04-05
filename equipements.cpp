@@ -89,3 +89,4 @@ QSqlQueryModel* equipements::affid_eq(){
 
     return model;
 }
+

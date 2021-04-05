@@ -24,7 +24,7 @@ public:
     QSqlQueryModel* afficher();
     bool supprimer(int);
     bool modifier(int);
-
+QSqlQueryModel* chercher(QString);
 private:
     int id_service,nbre_materiel;
     QString nom_service,type;

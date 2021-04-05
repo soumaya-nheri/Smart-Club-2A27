@@ -4,6 +4,8 @@
 #include <QDialog>
 #include "equipements.h"
 #include "services.h"
+#include "QMediaPlayer"
+#include "QPropertyAnimation"
 namespace Ui {
 class Dialog;
 }
@@ -52,11 +54,18 @@ private slots:
 
         void on_pushButton_8_clicked();
 
+        void on_pushButton_10_clicked();
+
+        void on_pushButton_11_clicked();
+
+        void on_pushButton_12_clicked();
+
 private:
     Ui::Dialog *ui;
     equipements Etmp;
     services Etmp1;
-
+    QMediaPlayer *player = new QMediaPlayer;
+    QPropertyAnimation * Animation;
 };
 
 #endif // DIALOG_H

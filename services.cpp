@@ -77,3 +77,13 @@ bool services::modifier(int id_service)
 
 }
 
+QSqlQueryModel * services ::chercher(QString word)
+{
+
+    QSqlQueryModel * model= new QSqlQueryModel();
+    QString w= "select * from services where id_service like '%"+word+"%' or nom_service like '%"+word+"%' or nbre_materiel like '%"+word+"%' or type like '%"+word+"%'";
+    model->setQuery(w);
+    return model;
+
+
+}

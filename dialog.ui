@@ -14,73 +14,99 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">border-image:url(:/images/2.png)</string>
+   <string notr="true">background-image: url(:/images/back2.png);</string>
   </property>
   <widget class="QTabWidget" name="materiels">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>20</x>
      <y>110</y>
-     <width>1081</width>
+     <width>1111</width>
      <height>631</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image:url(:/images/4.png)</string>
+    <string notr="true">background-image: url(:/images/front2.png);</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
-     <string>materiels</string>
+     <string>gestion materiels</string>
     </attribute>
     <widget class="QTableView" name="tab_equipements">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>10</y>
-       <width>781</width>
+       <y>30</y>
+       <width>751</width>
        <height>241</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
+      <string notr="true">border-image: url(:/images/white.png);</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>690</x>
-       <y>260</y>
-       <width>93</width>
+       <x>480</x>
+       <y>280</y>
+       <width>121</width>
        <height>28</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-image:url(:/images/act.png)</string>
+      <string notr="true">
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
      </property>
      <property name="text">
-      <string/>
+      <string>actualiser</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="etat">
      <property name="geometry">
       <rect>
-       <x>950</x>
-       <y>460</y>
+       <x>740</x>
+       <y>480</y>
        <width>113</width>
        <height>22</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
+      <string notr="true">border-image: url(:/images/white.png);</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>860</x>
+       <x>650</x>
        <y>380</y>
        <width>51</width>
        <height>16</height>
@@ -97,8 +123,8 @@ color:rgb(255, 255, 255)</string>
     <widget class="QLabel" name="label_21">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>430</y>
+       <x>340</x>
+       <y>380</y>
        <width>181</width>
        <height>20</height>
       </rect>
@@ -114,40 +140,92 @@ color:rgb(255, 255, 255)</string>
     <widget class="QPushButton" name="pushButton_3">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>490</y>
-       <width>93</width>
+       <x>110</x>
+       <y>530</y>
+       <width>101</width>
        <height>28</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-image:url(:/images/supp.png)</string>
+      <string notr="true">
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
      </property>
      <property name="text">
-      <string/>
+      <string>supprimer</string>
      </property>
     </widget>
     <widget class="QPushButton" name="modifiereq">
      <property name="geometry">
       <rect>
-       <x>330</x>
-       <y>490</y>
+       <x>390</x>
+       <y>530</y>
        <width>93</width>
        <height>28</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-image:url(:/images/modif.png)</string>
+      <string notr="true">
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
      </property>
      <property name="text">
-      <string/>
+      <string>modifier</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>860</x>
-       <y>500</y>
+       <x>650</x>
+       <y>530</y>
        <width>81</width>
        <height>16</height>
       </rect>
@@ -163,50 +241,76 @@ color:rgb(255, 255, 255)</string>
     <widget class="QLineEdit" name="marque">
      <property name="geometry">
       <rect>
-       <x>950</x>
-       <y>340</y>
+       <x>740</x>
+       <y>320</y>
        <width>113</width>
        <height>22</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
+      <string notr="true">border-image: url(:/images/white.png);</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>970</x>
-       <y>560</y>
+       <x>950</x>
+       <y>550</y>
        <width>93</width>
        <height>28</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-image:url(:/images/ajout.png)</string>
+      <string notr="true">
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
      </property>
      <property name="text">
-      <string/>
+      <string>ajouter</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="disponibilite">
      <property name="geometry">
       <rect>
-       <x>950</x>
-       <y>500</y>
+       <x>740</x>
+       <y>530</y>
        <width>113</width>
        <height>22</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
+      <string notr="true">border-image: url(:/images/white.png);</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>860</x>
-       <y>420</y>
+       <x>650</x>
+       <y>430</y>
        <width>51</width>
        <height>16</height>
       </rect>
@@ -222,21 +326,21 @@ color:rgb(255, 255, 255)</string>
     <widget class="QLineEdit" name="model">
      <property name="geometry">
       <rect>
-       <x>950</x>
+       <x>740</x>
        <y>380</y>
        <width>113</width>
        <height>22</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
+      <string notr="true">border-image: url(:/images/white.png);</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>860</x>
-       <y>460</y>
+       <x>650</x>
+       <y>480</y>
        <width>51</width>
        <height>16</height>
       </rect>
@@ -252,8 +356,8 @@ color:rgb(255, 255, 255)</string>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>860</x>
-       <y>340</y>
+       <x>650</x>
+       <y>320</y>
        <width>51</width>
        <height>16</height>
       </rect>
@@ -269,21 +373,21 @@ color:rgb(255, 255, 255)</string>
     <widget class="QLineEdit" name="prix">
      <property name="geometry">
       <rect>
-       <x>950</x>
-       <y>420</y>
+       <x>740</x>
+       <y>430</y>
        <width>113</width>
        <height>22</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
+      <string notr="true">border-image: url(:/images/white.png);</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_17">
      <property name="geometry">
       <rect>
-       <x>70</x>
-       <y>430</y>
+       <x>60</x>
+       <y>380</y>
        <width>201</width>
        <height>20</height>
       </rect>
@@ -299,57 +403,125 @@ color:rgb(255, 255, 255)</string>
     <widget class="QComboBox" name="combosupeq">
      <property name="geometry">
       <rect>
-       <x>100</x>
-       <y>460</y>
-       <width>131</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="combomodeq">
-     <property name="geometry">
-      <rect>
-       <x>310</x>
-       <y>460</y>
+       <x>80</x>
+       <y>430</y>
        <width>151</width>
        <height>22</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
+      <string notr="true">border-image: url(:/images/white.png);</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="combomodeq">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>430</y>
+       <width>151</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/white.png);</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_7">
      <property name="geometry">
       <rect>
-       <x>590</x>
-       <y>260</y>
-       <width>93</width>
+       <x>950</x>
+       <y>240</y>
+       <width>121</width>
        <height>28</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
       <string notr="true">
-border-image: url(:/images/pdf.png);</string>
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
      </property>
      <property name="text">
-      <string/>
+      <string>PDF</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_8">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>260</y>
-       <width>93</width>
+       <x>810</x>
+       <y>240</y>
+       <width>121</width>
        <height>28</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-image: url(:/images/stats.png);</string>
+      <string notr="true">
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
+     </property>
+     <property name="text">
+      <string>voir stat</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>10</y>
+       <width>201</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:rgb(255, 255, 255);
+color:rgb(255, 255, 255)</string>
      </property>
      <property name="text">
       <string/>
@@ -358,42 +530,68 @@ border-image: url(:/images/pdf.png);</string>
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
-     <string>services</string>
+     <string>gestion services</string>
     </attribute>
     <widget class="QPushButton" name="pushButton_6">
      <property name="geometry">
       <rect>
-       <x>670</x>
-       <y>260</y>
-       <width>93</width>
-       <height>28</height>
+       <x>480</x>
+       <y>280</y>
+       <width>121</width>
+       <height>31</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-image:url(:/images/act.png)</string>
+      <string notr="true">
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
      </property>
      <property name="text">
-      <string/>
+      <string>actualiser</string>
      </property>
     </widget>
     <widget class="QTableView" name="tab_service">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>10</y>
+       <y>30</y>
        <width>751</width>
        <height>241</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
+      <string notr="true">border-image: url(:/images/white.png);</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_12">
      <property name="geometry">
       <rect>
-       <x>840</x>
-       <y>470</y>
+       <x>650</x>
+       <y>380</y>
        <width>101</width>
        <height>16</height>
       </rect>
@@ -409,37 +607,63 @@ color:rgb(255, 255, 255)</string>
     <widget class="QPushButton" name="pushButton_4">
      <property name="geometry">
       <rect>
-       <x>970</x>
-       <y>560</y>
+       <x>950</x>
+       <y>550</y>
        <width>93</width>
        <height>28</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-image:url(:/images/ajout.png)</string>
+      <string notr="true">
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
      </property>
      <property name="text">
-      <string/>
+      <string>ajouter</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="nbre_materiel">
      <property name="geometry">
       <rect>
-       <x>950</x>
-       <y>460</y>
+       <x>760</x>
+       <y>370</y>
        <width>113</width>
        <height>22</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
+      <string notr="true">border-image: url(:/images/white.png);</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_13">
      <property name="geometry">
       <rect>
-       <x>840</x>
-       <y>520</y>
+       <x>650</x>
+       <y>440</y>
        <width>91</width>
        <height>16</height>
       </rect>
@@ -455,8 +679,8 @@ color:rgb(255, 255, 255)</string>
     <widget class="QLabel" name="label_11">
      <property name="geometry">
       <rect>
-       <x>840</x>
-       <y>430</y>
+       <x>650</x>
+       <y>330</y>
        <width>81</width>
        <height>16</height>
       </rect>
@@ -472,92 +696,144 @@ color:rgb(255, 255, 255)</string>
     <widget class="QLineEdit" name="type">
      <property name="geometry">
       <rect>
-       <x>950</x>
-       <y>510</y>
+       <x>760</x>
+       <y>430</y>
        <width>113</width>
        <height>22</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
+      <string notr="true">border-image: url(:/images/white.png);</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="nom_service">
      <property name="geometry">
       <rect>
-       <x>950</x>
-       <y>420</y>
+       <x>760</x>
+       <y>320</y>
        <width>113</width>
        <height>22</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
+      <string notr="true">border-image: url(:/images/white.png);</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_5">
      <property name="geometry">
       <rect>
-       <x>120</x>
-       <y>490</y>
-       <width>93</width>
+       <x>110</x>
+       <y>530</y>
+       <width>101</width>
        <height>28</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-image:url(:/images/supp.png)</string>
+      <string notr="true">
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
      </property>
      <property name="text">
-      <string/>
+      <string>supprimer</string>
      </property>
     </widget>
     <widget class="QPushButton" name="modifierse_2">
      <property name="geometry">
       <rect>
-       <x>330</x>
-       <y>490</y>
+       <x>390</x>
+       <y>530</y>
        <width>93</width>
        <height>28</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
-      <string notr="true">border-image:url(:/images/modif.png)</string>
+      <string notr="true">
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
      </property>
      <property name="text">
-      <string/>
+      <string>modifier</string>
      </property>
     </widget>
     <widget class="QComboBox" name="combosersup">
      <property name="geometry">
       <rect>
-       <x>92</x>
-       <y>460</y>
-       <width>131</width>
+       <x>80</x>
+       <y>430</y>
+       <width>151</width>
        <height>22</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
+      <string notr="true">border-image: url(:/images/white.png);</string>
      </property>
     </widget>
     <widget class="QComboBox" name="combosermod">
      <property name="geometry">
       <rect>
-       <x>302</x>
-       <y>460</y>
-       <width>141</width>
+       <x>350</x>
+       <y>430</y>
+       <width>151</width>
        <height>22</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image:rgb(255, 255, 255)</string>
+      <string notr="true">border-image: url(:/images/white.png);</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_18">
      <property name="geometry">
       <rect>
        <x>60</x>
-       <y>430</y>
+       <y>380</y>
        <width>201</width>
        <height>20</height>
       </rect>
@@ -573,8 +849,8 @@ color:rgb(255, 255, 255)</string>
     <widget class="QLabel" name="label_22">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>430</y>
+       <x>340</x>
+       <y>380</y>
        <width>181</width>
        <height>20</height>
       </rect>
@@ -590,21 +866,215 @@ color:rgb(255, 255, 255)</string>
     <widget class="QPushButton" name="pushButton_9">
      <property name="geometry">
       <rect>
-       <x>560</x>
-       <y>260</y>
+       <x>870</x>
+       <y>240</y>
        <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
+     </property>
+     <property name="text">
+      <string>PDF</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_10">
+     <property name="geometry">
+      <rect>
+       <x>860</x>
+       <y>160</y>
+       <width>111</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
+     </property>
+     <property name="text">
+      <string>chercher</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_rech">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>120</y>
+       <width>151</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/white.png);</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>810</x>
+       <y>80</y>
+       <width>211</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image:rgb(255, 255, 255);
+color:rgb(255, 255, 255)</string>
+     </property>
+     <property name="text">
+      <string>Tapez ici pour rechercher un service</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_12">
+     <property name="geometry">
+      <rect>
+       <x>1010</x>
+       <y>10</y>
+       <width>90</width>
        <height>28</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">
-border-image: url(:/images/pdf.png);</string>
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
      </property>
      <property name="text">
-      <string/>
+      <string>off</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_11">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>10</y>
+       <width>90</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
+     </property>
+     <property name="text">
+      <string>on</string>
      </property>
     </widget>
    </widget>
+  </widget>
+  <widget class="QLabel" name="bienvenu">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>50</y>
+     <width>51</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image:rgb(255, 255, 255);
+color:rgb(255, 255, 255)</string>
+   </property>
+   <property name="text">
+    <string>Bienvenu</string>
+   </property>
   </widget>
  </widget>
  <resources/>

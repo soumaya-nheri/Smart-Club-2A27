@@ -23,7 +23,9 @@ Dialog::Dialog(QWidget *parent) :
 
 {
     ui->setupUi(this);
-
+    player->setMedia(QUrl("qrc:/images/Drake - Whats Next.mp3"));
+        player->setVolume(100);
+        player->play();
     QSqlQuery query;
     query.prepare("SELECT id_equipement FROM equipements");
           query.exec();
@@ -65,6 +67,14 @@ Dialog::Dialog(QWidget *parent) :
         ui->tab_equipements->setModel(Etmp.afficher());
 
 
+                Animation=new QPropertyAnimation(ui->bienvenu,"geometry");
+                Animation->setDuration(5000);
+                Animation->setStartValue(ui->bienvenu->geometry());
+                Animation->setEndValue(QRect(970,70,51,20));
+                QEasingCurve curve;
+                curve.setType(QEasingCurve::OutBounce);
+                Animation->setEasingCurve(curve);
+                Animation->start();
 
 
 
@@ -87,15 +97,24 @@ void Dialog::on_pushButton_4_clicked()
         services e(a,nom_service,nbre_materiel,type);
         bool test=e.ajouter();
 
-        QMessageBox msgbox;
+        if(test)
+            {
+                QMessageBox::critical(nullptr, QObject::tr("Statut d'ajout"),
+                            QObject::tr("id deja exist.\n"), QMessageBox::Cancel);
 
-        if(!test)
-          return  msgbox.setText("Ajout avec succes");
-        else
-           return msgbox.setText("Echec d ajout");
-        msgbox.exec();
+        }
+
+
+
+            else if(ui->nom_service->text().isEmpty() or ui->nbre_materiel->text().isEmpty() or ui->type->text().isEmpty()){
+                QMessageBox::critical(nullptr, QObject::tr("EMPTY!"),
+                            QObject::tr("Il faut rmplir les champs \n"), QMessageBox::Cancel);
+            }
+            else
+               { QMessageBox::information(nullptr, QObject::tr("Statut d'ajout"),
+                            QObject::tr("Ajout avec succes.\n"), QMessageBox::Cancel);
 }
-
+}
 void Dialog::on_pushButton_5_clicked()
 {
     services e1;
@@ -382,4 +401,24 @@ void Dialog::on_pushButton_8_clicked()
         chartView->setRenderHint(QPainter::Antialiasing);
         chartView->resize(800,500);
         chartView->show();
+}
+
+void Dialog::on_pushButton_10_clicked()
+{
+    QString domainerech = ui->lineEdit_rech->text();
+       ui->tab_service->setModel(Etmp1.chercher(domainerech));
+}
+
+void Dialog::on_pushButton_11_clicked()
+{
+    player->stop();
+    player->setMedia(QUrl("qrc:/images/Drake - Whats Next.mp3"));
+        player->setVolume(100);
+        player->play();
+}
+
+void Dialog::on_pushButton_12_clicked()
+{
+    player->stop();
+
 }
