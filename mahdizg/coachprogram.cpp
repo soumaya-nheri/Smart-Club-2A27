@@ -15,6 +15,8 @@
 #include "QTextDocument"
 #include "Qprinter"
 #include "Qprintdialog"
+#include<QSqlRecord>
+#include<QSqlRelationalTableModel>
 
 
 
@@ -22,7 +24,14 @@ CoachProgram::CoachProgram(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::CoachProgram)
 {
+
     ui->setupUi(this);
+    ui->ANIMATION->setText("Bienvenue");
+    animation=new QPropertyAnimation(ui->ANIMATION,"geometry");
+    animation->setDuration(5000);
+    animation->setStartValue(ui->ANIMATION->geometry());
+    animation->setEndValue(QRect(870,40,151,51));
+    animation->start();
       ui->ID_Coach->setValidator( new QIntValidator(0, 9999, this));
       ui->ID_Planning->setValidator( new QIntValidator(0, 9999, this));
       ui->Numero_Sem->setValidator( new QIntValidator(0, 9999, this));
@@ -37,8 +46,34 @@ CoachProgram::CoachProgram(QWidget *parent) :
       qsrand(qrand());
         ui->ID_Coach->setText(QString::number(qrand() % ((High + 1) - Low) + Low));
           ui->ID_Planning->setText(QString::number(qrand() % ((High + 1) - Low) + Low));
+              QSqlQuery qry;
+                  qry.prepare("SELECT ID_Coach FROM coach ");
+                  qry.exec();
+                  qry.first();
+                  int groupID_Coach = qry.record().indexOf("ID_Coach");
+                   ui->ID_Coach_modf_sup->addItem(qry.value(0).toString());
+                  while (qry.next()) {
+                        ui->ID_Coach_modf_sup->addItem(qry.value(groupID_Coach).toString());
 }
-
+                  QSqlQuery query;
+                      query.prepare("SELECT ID_Planning FROM Programs");
+                      query.exec();
+                      query.first();
+                      int groupID_Planning = query.record().indexOf("ID_Planning");
+                       ui->ID_Programs_modf_sup->addItem(query.value(0).toString());
+                      while (query.next()) {
+                            ui->ID_Programs_modf_sup->addItem(query.value(groupID_Planning).toString());
+    }
+                      QSqlQuery querr;
+                          querr.prepare("SELECT Email FROM Coach");
+                          querr.exec();
+                          querr.first();
+                          int groupmail = querr.record().indexOf("Email");
+                           ui->mail->addItem(querr.value(0).toString());
+                          while (querr.next()) {
+                                ui->mail->addItem(querr.value(groupmail).toString());
+        }
+}
 CoachProgram::~CoachProgram()
 {
     delete ui;
@@ -52,7 +87,9 @@ void CoachProgram::on_Ajouter1_clicked()
     QString Prenom=ui->Prenom->text();
     QString Specialite=ui->Specialite->text();
     QDate Date_Naiss =ui->Date_Naiss->date();
-    coach r(ID_Coach,Nom,Prenom,Specialite,Date_Naiss);
+    QString Email=ui->Email->text();
+    int AB_PR=ui->AB_PR->text().toInt();
+    coach r(ID_Coach,Nom,Prenom,Specialite,Date_Naiss,Email,AB_PR);
     bool test=r.Ajouter1();
     QMessageBox msgbox;
 
@@ -61,10 +98,30 @@ void CoachProgram::on_Ajouter1_clicked()
         else
             return msgbox.setText("Echec d ajout");
         msgbox.exec();
+        ui->ID_Coach_modf_sup->clear();
+        QSqlQuery qry;
+            qry.prepare("SELECT ID_Coach FROM coach ");
+            qry.exec();
+            qry.first();
+             ui->ID_Coach_modf_sup->addItem(qry.value(0).toString());
+             int groupID_COACH = qry.record().indexOf("ID_COACH");
+            while (qry.next()) {
+                  ui->ID_Coach_modf_sup->addItem(qry.value(groupID_COACH).toString());
+    }
 }
 
 void CoachProgram::on_Afficher1_clicked()
 {
+    ui->ID_Coach_modf_sup->clear();
+    QSqlQuery qry;
+        qry.prepare("SELECT ID_Coach FROM coach ");
+        qry.exec();
+        qry.first();
+        int groupID_Coach = qry.record().indexOf("ID_Coach");
+         ui->ID_Coach_modf_sup->addItem(qry.value(0).toString());
+        while (qry.next()) {
+              ui->ID_Coach_modf_sup->addItem(qry.value(groupID_Coach).toString());
+}
     ui->tableView_2->setModel(re1.Afficher1());
 }
 
@@ -72,11 +129,11 @@ void CoachProgram::on_Modifier1_clicked()
 {
     modifierCoach dm;
         QMessageBox msg;
-       dm.setID_Coach(ui->ID_Coach_modf_sup->text().toInt());
+       dm.setID_Coach(ui->ID_Coach_modf_sup->currentText().toInt());
 
 
            QSqlQuery qry;
-           int ID_Coach_modf_sup=ui->ID_Coach_modf_sup->text().toInt();
+           int ID_Coach_modf_sup=ui->ID_Coach_modf_sup->currentText().toInt();
              QString ID_Coach_modf_sup_STRING= QString::number(ID_Coach_modf_sup);
              qry.prepare("SELECT * from coach where ID_Coach='"+ID_Coach_modf_sup_STRING+"'");
               if (qry.exec())
@@ -88,6 +145,10 @@ void CoachProgram::on_Modifier1_clicked()
                  dm.setPrenom(sa);
                  QString ev=qry.value(3).toString();
                dm.setSpecialite(ev);
+               QString em=qry.value(5).toString();
+             dm.setEmail(em);
+             int aw=qry.value(6).toInt();
+           dm.setAB_PR(aw);
 
 
                    dm.exec();
@@ -97,8 +158,18 @@ void CoachProgram::on_Modifier1_clicked()
 
 void CoachProgram::on_Supprimer1_clicked()
 {
+    ui->ID_Coach_modf_sup->clear();
+    QSqlQuery qry;
+        qry.prepare("SELECT ID_Coach FROM coach ");
+        qry.exec();
+        qry.first();
+        int groupID_DEP = qry.record().indexOf("ID_Coach");
+         ui->ID_Coach_modf_sup->addItem(qry.value(0).toString());
+        while (qry.next()) {
+              ui->ID_Coach_modf_sup->addItem(qry.value(groupID_DEP).toString());
+}
     coach re1;
-       re1.setID_Coach(ui->ID_Coach_modf_sup->text().toInt());
+       re1.setID_Coach(ui->ID_Coach_modf_sup->currentText().toInt());
        bool test=re1.Supprimer1(re1.getID_Coach());
        QMessageBox msgbox;
 
@@ -111,13 +182,23 @@ void CoachProgram::on_Supprimer1_clicked()
 
 void CoachProgram::on_Ajouter2_clicked()
 {
+    ui->ID_Programs_modf_sup->clear();
+    QSqlQuery query;
+        query.prepare("SELECT ID_Planning FROM Programs ");
+        query.exec();
+        query.first();
+        int groupID_Planning = query.record().indexOf("ID_Planning");
+         ui->ID_Programs_modf_sup->addItem(query.value(0).toString());
+        while (query.next()) {
+              ui->ID_Programs_modf_sup->addItem(query.value(groupID_Planning).toString());
+}
     int ID_Planning=ui->ID_Planning->text().toInt();
     QDate Date_Planning =ui->Date_Planning->date();
     QTime Heure=ui->Heure->time();
     int Numero_Sem=ui->Numero_Sem->text().toInt();
     int NB_reservation =ui->NB_reservation->text().toInt();
     QString Nom_Coach =ui->Nom_Coach->text();
-    programs r(ID_Planning,Date_Planning,Heure,Numero_Sem,NB_reservation,Nom_Coach);
+    programs r  (ID_Planning,Date_Planning,Heure,Numero_Sem,NB_reservation,Nom_Coach);
     bool test=r.Ajouter2();
     QMessageBox msgbox;
 
@@ -132,16 +213,26 @@ void CoachProgram::on_Afficher2_clicked()
 {
     programs re1;
      ui->tableView->setModel(re1.Afficher2());
+     ui->ID_Programs_modf_sup->clear();
+     QSqlQuery query;
+         query.prepare("SELECT ID_Planning FROM Programs ");
+         query.exec();
+         query.first();
+         int groupID_Planning = query.record().indexOf("ID_Planning");
+          ui->ID_Programs_modf_sup->addItem(query.value(0).toString());
+         while (query.next()) {
+               ui->ID_Programs_modf_sup->addItem(query.value(groupID_Planning).toString());
+ }
 }
 
 void CoachProgram::on_Modifier2_clicked()
 {
     modifierProgrammes dm;
         QMessageBox msg;
-       dm.setID_Planning(ui->ID_Programs_modf_sup->text().toInt());
+       dm.setID_Planning(ui->ID_Programs_modf_sup->currentText().toInt());
 
        QSqlQuery qry;
-       int ID_Programs_modf_sup=ui->ID_Programs_modf_sup->text().toInt();
+       int ID_Programs_modf_sup=ui->ID_Programs_modf_sup->currentText().toInt();
          QString ID_Programs_modf_sup_STRING= QString::number(ID_Programs_modf_sup);
          qry.prepare("SELECT * from programs where ID_Planning='"+ID_Programs_modf_sup_STRING+"'");
           if (qry.exec())
@@ -167,8 +258,18 @@ void CoachProgram::on_Modifier2_clicked()
 
 void CoachProgram::on_Supprimer2_clicked()
 {
+    ui->ID_Programs_modf_sup->clear();
+    QSqlQuery query;
+        query.prepare("SELECT ID_Planning FROM Programs ");
+        query.exec();
+        query.first();
+        int groupID_Planning = query.record().indexOf("ID_Planning");
+         ui->ID_Programs_modf_sup->addItem(query.value(0).toString());
+        while (query.next()) {
+              ui->ID_Programs_modf_sup->addItem(query.value(groupID_Planning).toString());
+}
     programs re1;
-       re1.setID_Planning(ui->ID_Programs_modf_sup->text().toInt());
+       re1.setID_Planning(ui->ID_Programs_modf_sup->currentText().toInt());
        bool test=re1.Supprimer2(re1.getID_Planning());
        QMessageBox msgbox;
 

@@ -11,19 +11,24 @@ class coach
 {
 public:
     coach();
-    coach (int,QString,QString,QString,QDate);
+    coach (int,QString,QString,QString,QDate,QString,int);
     //getters
     int getID_Coach();
     QString getNom();
     QString getPrenom();
     QString getSpecialite();
     QDate getDate_Naiss();
+    QString getEmail();
+    int getAB_PR();
     //setters
     void setID_Coach(int);
     void setNom(QString);
     void setPrenom(QString);
     void setSpecialite(QString);
     void setDate_Naiss(QDate);
+    void setEmail(QString);
+    void setAB_PR(int);
+
     //functions
     bool Ajouter1();
     QSqlQueryModel* Afficher1();
@@ -32,9 +37,9 @@ public:
     QSqlQueryModel* chercher(QString);
 
 private:
-int ID_Coach;
+int ID_Coach,AB_PR;
 QDate Date_Naiss;
-QString Nom,Prenom,Specialite;
+QString Nom,Prenom,Specialite,Email;
 
 
 };

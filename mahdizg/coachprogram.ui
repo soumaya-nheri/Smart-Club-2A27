@@ -14,22 +14,29 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/images/2.png);</string>
+   <string notr="true">background-image: url(:/images/images/backg2.png);</string>
   </property>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>30</y>
-     <width>971</width>
-     <height>821</height>
+     <x>0</x>
+     <y>90</y>
+     <width>1191</width>
+     <height>791</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">background-image: url(:/images/images/1x/0.2.png);</string>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -38,9 +45,9 @@
     <widget class="QTableView" name="tableView_2">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>130</y>
-       <width>421</width>
+       <x>10</x>
+       <y>40</y>
+       <width>811</width>
        <height>281</height>
       </rect>
      </property>
@@ -51,10 +58,10 @@
     <widget class="QPushButton" name="Afficher1">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>380</y>
-       <width>75</width>
-       <height>23</height>
+       <x>724</x>
+       <y>282</y>
+       <width>91</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -67,8 +74,8 @@
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>660</x>
-       <y>80</y>
+       <x>940</x>
+       <y>40</y>
        <width>151</width>
        <height>31</height>
       </rect>
@@ -91,8 +98,8 @@
     <widget class="QPushButton" name="Modifier1">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>511</y>
+       <x>40</x>
+       <y>520</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -107,8 +114,8 @@
     <widget class="QPushButton" name="Supprimer1">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>551</y>
+       <x>180</x>
+       <y>520</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -123,10 +130,10 @@
     <widget class="QLabel" name="label_11">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>440</y>
+       <x>120</x>
+       <y>390</y>
        <width>81</width>
-       <height>21</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -145,8 +152,8 @@
     <widget class="QLabel" name="label_12">
      <property name="geometry">
       <rect>
-       <x>90</x>
-       <y>481</y>
+       <x>70</x>
+       <y>460</y>
        <width>61</width>
        <height>20</height>
       </rect>
@@ -158,24 +165,11 @@
       <string>ID_Coach</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="ID_Coach_modf_sup">
-     <property name="geometry">
-      <rect>
-       <x>150</x>
-       <y>480</y>
-       <width>121</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-image: url(:/images/blan.png);</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_13">
      <property name="geometry">
       <rect>
-       <x>510</x>
-       <y>160</y>
+       <x>890</x>
+       <y>90</y>
        <width>47</width>
        <height>14</height>
       </rect>
@@ -193,10 +187,10 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>580</x>
-       <y>160</y>
+       <x>960</x>
+       <y>90</y>
        <width>113</width>
-       <height>20</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -206,8 +200,8 @@
     <widget class="QLabel" name="label_14">
      <property name="geometry">
       <rect>
-       <x>510</x>
-       <y>360</y>
+       <x>890</x>
+       <y>290</y>
        <width>71</width>
        <height>21</height>
       </rect>
@@ -222,8 +216,8 @@
     <widget class="QLineEdit" name="Nom">
      <property name="geometry">
       <rect>
-       <x>580</x>
-       <y>210</y>
+       <x>960</x>
+       <y>140</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -235,8 +229,8 @@
     <widget class="QLabel" name="label_15">
      <property name="geometry">
       <rect>
-       <x>510</x>
-       <y>310</y>
+       <x>890</x>
+       <y>240</y>
        <width>61</width>
        <height>20</height>
       </rect>
@@ -251,8 +245,8 @@
     <widget class="QLabel" name="label_16">
      <property name="geometry">
       <rect>
-       <x>510</x>
-       <y>210</y>
+       <x>890</x>
+       <y>140</y>
        <width>51</width>
        <height>21</height>
       </rect>
@@ -267,8 +261,8 @@
     <widget class="QLabel" name="label_17">
      <property name="geometry">
       <rect>
-       <x>510</x>
-       <y>260</y>
+       <x>890</x>
+       <y>190</y>
        <width>47</width>
        <height>14</height>
       </rect>
@@ -283,8 +277,8 @@
     <widget class="QLineEdit" name="Specialite">
      <property name="geometry">
       <rect>
-       <x>580</x>
-       <y>310</y>
+       <x>960</x>
+       <y>240</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -296,18 +290,21 @@
     <widget class="QDateEdit" name="Date_Naiss">
      <property name="geometry">
       <rect>
-       <x>590</x>
-       <y>360</y>
+       <x>970</x>
+       <y>290</y>
        <width>110</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/images/WHITE.png);</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="Prenom">
      <property name="geometry">
       <rect>
-       <x>580</x>
-       <y>260</y>
+       <x>960</x>
+       <y>190</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -319,7 +316,7 @@
     <widget class="QPushButton" name="Ajouter1">
      <property name="geometry">
       <rect>
-       <x>760</x>
+       <x>1080</x>
        <y>410</y>
        <width>75</width>
        <height>23</height>
@@ -335,14 +332,15 @@
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>710</x>
-       <y>150</y>
-       <width>31</width>
-       <height>31</height>
+       <x>1070</x>
+       <y>90</y>
+       <width>21</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image: url(:/images/1.jpg);</string>
+      <string notr="true">
+border-image: url(:/images/images/reffffffffffff.png);</string>
      </property>
      <property name="text">
       <string/>
@@ -351,11 +349,18 @@
     <widget class="QPushButton" name="pushButton_4">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>350</y>
+       <x>870</x>
+       <y>500</y>
        <width>61</width>
        <height>61</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">border-image: url(:/images/12.png);</string>
@@ -367,11 +372,18 @@
     <widget class="QPushButton" name="button_5">
      <property name="geometry">
       <rect>
-       <x>430</x>
-       <y>100</y>
-       <width>75</width>
-       <height>23</height>
+       <x>710</x>
+       <y>0</y>
+       <width>111</width>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">color: rgb(255, 255, 255);</string>
@@ -383,14 +395,177 @@
     <widget class="QLineEdit" name="recherche">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>100</y>
+       <x>592</x>
+       <y>-1</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Email">
+     <property name="geometry">
+      <rect>
+       <x>970</x>
+       <y>340</y>
        <width>113</width>
        <height>20</height>
       </rect>
      </property>
      <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/blan.png);</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="AB_PR">
+     <property name="geometry">
+      <rect>
+       <x>970</x>
+       <y>380</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/blan.png);</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>340</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
       <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Email_Coach:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>896</x>
+       <y>380</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Ab_PR(1/0):</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="ID_Coach_modf_sup">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>460</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="mail">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>450</y>
+       <width>291</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>540</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mailling</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>390</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Rockwell Condensed</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/blan.png);</string>
+     </property>
+     <property name="text">
+      <string>Mailling_Coach</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>960</x>
+       <y>500</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Rockwell Condensed</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/blan.png);</string>
+     </property>
+     <property name="text">
+      <string>Exportation PDF</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>1050</x>
+       <y>540</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Rockwell Condensed</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/blan.png);</string>
+     </property>
+     <property name="text">
+      <string>Liste Coachs</string>
      </property>
     </widget>
    </widget>
@@ -401,10 +576,10 @@
     <widget class="QTableView" name="tableView">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>140</y>
-       <width>421</width>
-       <height>301</height>
+       <x>10</x>
+       <y>40</y>
+       <width>821</width>
+       <height>281</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -415,9 +590,9 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QPushButton" name="Afficher2">
      <property name="geometry">
       <rect>
-       <x>414</x>
-       <y>402</y>
-       <width>81</width>
+       <x>730</x>
+       <y>280</y>
+       <width>91</width>
        <height>31</height>
       </rect>
      </property>
@@ -431,8 +606,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>530</x>
-       <y>150</y>
+       <x>870</x>
+       <y>100</y>
        <width>51</width>
        <height>21</height>
       </rect>
@@ -447,8 +622,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>530</x>
-       <y>200</y>
+       <x>870</x>
+       <y>150</y>
        <width>71</width>
        <height>21</height>
       </rect>
@@ -463,8 +638,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>530</x>
-       <y>250</y>
+       <x>870</x>
+       <y>200</y>
        <width>41</width>
        <height>21</height>
       </rect>
@@ -479,8 +654,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>530</x>
-       <y>290</y>
+       <x>860</x>
+       <y>240</y>
        <width>71</width>
        <height>21</height>
       </rect>
@@ -495,8 +670,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>530</x>
-       <y>340</y>
+       <x>860</x>
+       <y>290</y>
        <width>81</width>
        <height>16</height>
       </rect>
@@ -511,8 +686,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>530</x>
-       <y>380</y>
+       <x>860</x>
+       <y>330</y>
        <width>61</width>
        <height>16</height>
       </rect>
@@ -530,10 +705,10 @@ border-image: url(:/images/blan.png);</string>
      </property>
      <property name="geometry">
       <rect>
-       <x>620</x>
-       <y>150</y>
+       <x>950</x>
+       <y>100</y>
        <width>113</width>
-       <height>20</height>
+       <height>21</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -543,8 +718,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QLineEdit" name="Numero_Sem">
      <property name="geometry">
       <rect>
-       <x>620</x>
-       <y>290</y>
+       <x>950</x>
+       <y>240</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -556,8 +731,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QLineEdit" name="NB_reservation">
      <property name="geometry">
       <rect>
-       <x>620</x>
-       <y>340</y>
+       <x>950</x>
+       <y>290</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -569,8 +744,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QLineEdit" name="Nom_Coach">
      <property name="geometry">
       <rect>
-       <x>620</x>
-       <y>380</y>
+       <x>950</x>
+       <y>330</y>
        <width>113</width>
        <height>20</height>
       </rect>
@@ -582,8 +757,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QPushButton" name="Ajouter2">
      <property name="geometry">
       <rect>
-       <x>760</x>
-       <y>420</y>
+       <x>1070</x>
+       <y>380</y>
        <width>75</width>
        <height>23</height>
       </rect>
@@ -598,8 +773,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
-       <x>640</x>
-       <y>70</y>
+       <x>930</x>
+       <y>40</y>
        <width>201</width>
        <height>31</height>
       </rect>
@@ -622,10 +797,10 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>469</y>
+       <x>110</x>
+       <y>410</y>
        <width>101</width>
-       <height>21</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -638,27 +813,14 @@ border-image: url(:/images/blan.png);</string>
       <string notr="true">border-image: url(:/images/blan.png);</string>
      </property>
      <property name="text">
-      <string>ID_Planing</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="ID_Programs_modf_sup">
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>509</y>
-       <width>121</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-image: url(:/images/blan.png);</string>
+      <string>ID_Planning</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>86</x>
-       <y>510</y>
+       <x>70</x>
+       <y>470</y>
        <width>61</width>
        <height>20</height>
       </rect>
@@ -673,8 +835,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QPushButton" name="Modifier2">
      <property name="geometry">
       <rect>
-       <x>170</x>
-       <y>540</y>
+       <x>50</x>
+       <y>530</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -689,8 +851,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QPushButton" name="Supprimer2">
      <property name="geometry">
       <rect>
-       <x>170</x>
-       <y>580</y>
+       <x>180</x>
+       <y>530</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -705,34 +867,41 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QTimeEdit" name="Heure">
      <property name="geometry">
       <rect>
-       <x>620</x>
-       <y>240</y>
+       <x>950</x>
+       <y>200</y>
        <width>118</width>
        <height>22</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/images/WHITE.png);</string>
      </property>
     </widget>
     <widget class="QDateEdit" name="Date_Planning">
      <property name="geometry">
       <rect>
-       <x>620</x>
-       <y>200</y>
-       <width>110</width>
-       <height>22</height>
+       <x>950</x>
+       <y>151</y>
+       <width>111</width>
+       <height>21</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/images/WHITE.png);</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>750</x>
-       <y>140</y>
-       <width>31</width>
-       <height>31</height>
+       <x>1060</x>
+       <y>100</y>
+       <width>21</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-image: url(:/images/1.jpg);</string>
+      <string notr="true">
+border-image: url(:/images/images/reffffffffffff.png);</string>
      </property>
      <property name="text">
       <string/>
@@ -741,8 +910,8 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QPushButton" name="pushButton_3">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>380</y>
+       <x>870</x>
+       <y>510</y>
        <width>61</width>
        <height>61</height>
       </rect>
@@ -757,10 +926,10 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QLineEdit" name="recherche_2">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>100</y>
-       <width>113</width>
-       <height>20</height>
+       <x>600</x>
+       <y>0</y>
+       <width>121</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -770,11 +939,18 @@ border-image: url(:/images/blan.png);</string>
     <widget class="QPushButton" name="button_6">
      <property name="geometry">
       <rect>
-       <x>430</x>
-       <y>100</y>
-       <width>75</width>
-       <height>23</height>
+       <x>720</x>
+       <y>0</y>
+       <width>111</width>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">color: rgb(255, 255, 255);</string>
@@ -783,7 +959,161 @@ border-image: url(:/images/blan.png);</string>
       <string>Recherche</string>
      </property>
     </widget>
+    <widget class="QComboBox" name="ID_Programs_modf_sup">
+     <property name="geometry">
+      <rect>
+       <x>154</x>
+       <y>470</y>
+       <width>101</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>540</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Mailling</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="mail_2">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>500</y>
+       <width>291</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_23">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>400</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Rockwell Condensed</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/blan.png);</string>
+     </property>
+     <property name="text">
+      <string>Mailling_Coach</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_24">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>440</y>
+       <width>161</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Rockwell Condensed</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/blan.png);</string>
+     </property>
+     <property name="text">
+      <string>Programme_Semaine</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_25">
+     <property name="geometry">
+      <rect>
+       <x>960</x>
+       <y>500</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Rockwell Condensed</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/blan.png);</string>
+     </property>
+     <property name="text">
+      <string>Exportation PDF</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_26">
+     <property name="geometry">
+      <rect>
+       <x>990</x>
+       <y>540</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Rockwell Condensed</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-image: url(:/images/blan.png);</string>
+     </property>
+     <property name="text">
+      <string>Liste Des Programmes</string>
+     </property>
+    </widget>
    </widget>
+  </widget>
+  <widget class="QLabel" name="ANIMATION">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>40</y>
+     <width>151</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>18</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/images/images/label-calcul.png);
+COLOR:white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
  </widget>
  <resources/>

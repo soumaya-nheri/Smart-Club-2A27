@@ -24,6 +24,10 @@ public:
     void setPrenom(QString);
     void setSpecialite(QString);
     void setDate_Naiss(QDate);
+    void setEmail(QString);
+    void setAB_PR(int);
+
+
 
 
 private slots:
@@ -32,9 +36,9 @@ private slots:
 
 private:
     Ui::modifierCoach *ui;
-    int ID_Coach;
+    int ID_Coach,AB_PR;
     QDate Date_Naiss;
-    QString Nom,Prenom,Specialite;
+    QString Nom,Prenom,Specialite,Email;
 };
 
 #endif // MODIFIERCOACH_H

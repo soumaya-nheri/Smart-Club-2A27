@@ -41,6 +41,18 @@ void modifierCoach::setDate_Naiss(QDate){
    ui->Date_Naiss_2->setDate(Date_Naiss);
 }
 
+void modifierCoach::setEmail(QString Email){
+
+
+   ui->Email_2->setText(Email);
+}
+
+void modifierCoach::setAB_PR(int AB_PR){
+QString AB_PR_String=QString::number(AB_PR);
+
+   ui->AB_PR_2->setText(AB_PR_String);
+}
+
 
 void modifierCoach::on_ModifierCoach_clicked()
 {
@@ -49,7 +61,9 @@ void modifierCoach::on_ModifierCoach_clicked()
     QString Prenom=ui->Prenom_2->text();
     QString Specialite=ui->Specialite_2->text();
     QDate Date_Naiss =ui->Date_Naiss_2->date();
-    coach d(ID_Coach,Nom,Prenom,Specialite,Date_Naiss);
+    QString Email=ui->Email_2->text();
+    int AB_PR=ui->AB_PR_2->text().toInt();
+    coach d(ID_Coach,Nom,Prenom,Specialite,Date_Naiss,Email,AB_PR);
     bool test=d.Modifier1(ID_Coach);
     QMessageBox msgbox;
 

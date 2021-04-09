@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "coach.h"
+#include<QPropertyAnimation>
 
 
 namespace Ui {
@@ -53,6 +54,7 @@ private:
     Ui::CoachProgram *ui;
     coach re1;
     int High=9999,Low=0;
+    QPropertyAnimation *animation;
 };
 
 #endif // COACHPROGRAM_H
