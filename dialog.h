@@ -2,8 +2,9 @@
 #define DIALOG_H
 
 #include <QDialog>
-#include "equipements.h"
-#include "services.h"
+#include"abonnement.h"
+#include"abonnes.h"
+
 namespace Ui {
 class Dialog;
 }
@@ -17,46 +18,28 @@ public:
     ~Dialog();
 
 private slots:
+    void on_Ajouter_clicked();
+
+    void on_Supprimer_clicked();
+
     void on_pushButton_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_Modifier_clicked();
 
+    void on_Ajouter_2_clicked();
 
+    void on_Modifier_2_clicked();
 
+    void on_Supprimer_2_clicked();
 
-
-
-
-
-        void on_pushButton_4_clicked();
-
-        void on_pushButton_5_clicked();
-
-        void on_pushButton_6_clicked();
-
-        void on_modifiereq_clicked();
-
-        void on_modifierse_2_clicked();
-
-        void on_pushButton_2_clicked();
-
-
-
-
-
-        void on_pushButton_7_clicked();
-
-
-
-        void on_pushButton_9_clicked();
-
-        void on_pushButton_8_clicked();
+    void on_pushButton_2_clicked();
 
 private:
     Ui::Dialog *ui;
-    equipements Etmp;
-    services Etmp1;
-
+    abonnes ab;
+        abonnement abt;
+        int High;
+        int Low;
 };
 
 #endif // DIALOG_H
