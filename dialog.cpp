@@ -67,14 +67,7 @@ Dialog::Dialog(QWidget *parent) :
         ui->tab_equipements->setModel(Etmp.afficher());
 
 
-                Animation=new QPropertyAnimation(ui->bienvenu,"geometry");
-                Animation->setDuration(5000);
-                Animation->setStartValue(ui->bienvenu->geometry());
-                Animation->setEndValue(QRect(970,70,51,20));
-                QEasingCurve curve;
-                curve.setType(QEasingCurve::OutBounce);
-                Animation->setEasingCurve(curve);
-                Animation->start();
+
 
 
 
@@ -421,4 +414,17 @@ void Dialog::on_pushButton_12_clicked()
 {
     player->stop();
 
+}
+
+void Dialog::on_pushButton_13_clicked()
+{
+    player->stop();
+    player->setMedia(QUrl("qrc:/images/Drake - Whats Next.mp3"));
+        player->setVolume(100);
+        player->play();
+}
+
+void Dialog::on_pushButton_14_clicked()
+{
+    player->stop();
 }

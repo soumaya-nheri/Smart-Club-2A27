@@ -60,6 +60,10 @@ private slots:
 
         void on_pushButton_12_clicked();
 
+        void on_pushButton_13_clicked();
+
+        void on_pushButton_14_clicked();
+
 private:
     Ui::Dialog *ui;
     equipements Etmp;

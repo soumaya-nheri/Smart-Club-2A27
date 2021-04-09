@@ -59,6 +59,7 @@ RESOURCES += \
     resources.qrc
 
 DISTFILES += \
+    ../../Desktop/projet photos/Untitled-1.png \
     ../../Desktop/projet photos/stats.png \
     ../../Desktop/projet photos/white.png \
     images/2.png \
