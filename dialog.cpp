@@ -181,6 +181,10 @@ void Dialog::on_modifierse_2_clicked()
 void Dialog::on_pushButton_clicked()
 {
 
+
+
+
+
         QString marque=ui->marque->text();
          QString model=ui->model->text();
          QString prix=ui->prix->text();
