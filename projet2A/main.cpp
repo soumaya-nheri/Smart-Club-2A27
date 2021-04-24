@@ -1,8 +1,7 @@
 #include "mainwindow.h"
-#include "connection.h"
-#include <QMessageBox>
 #include <QApplication>
-
+#include <QMessageBox>
+#include "connection.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);

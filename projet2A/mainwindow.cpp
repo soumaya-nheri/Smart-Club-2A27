@@ -1,26 +1,31 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "equipements.h"
-#include <QMessageBox>
-#include "services.h"
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+#include"revenues.h"
+#include"modifier.h"
+#include"QMessageBox"
+#include"depenses.h"
+#include"modifier2.h"
+
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QRegExp rx("[A-Za-z_ ]+");//[A-Za-z0-9_]
-            QRegExp rx1("[0-9_]+");
+    QValidator *validator = new QIntValidator(0, 99999999, this);
+    ui->ID_REV->setValidator( new QIntValidator(0, 9999, this));
+    ui->ID_REV2->setValidator( new QIntValidator(0, 9999, this));
+    ui->tab_rev->setModel(re.afficher());
+    ui->ID_REV3->setValidator( new QIntValidator(0, 9999, this));
+    ui->ID_DEP->setValidator( new QIntValidator(0, 9999, this));
+    ui->ID_DEP2->setValidator( new QIntValidator(0, 9999, this));
+    ui->ID_DEP3->setValidator( new QIntValidator(0, 9999, this));
+    ui->tab_dep->setModel(de.afficher());
+    ui->ACHAT->setValidator(validator);
+    ui->SALAIRE->setValidator(validator);
+    ui->SOMME->setValidator(validator);
 
-            QValidator *validator = new QRegExpValidator(rx, this);
 
-            ui->marque->setValidator(validator);
-                ui->model->setValidator(validator);
-                ui->prix->setValidator(validator);
-                ui->etat->setValidator(validator);
-                ui->disponibilite->setValidator(validator);
-    ui->id_equipement->setValidator( new QIntValidator(0, 999999, this));
-    ui->tab_equipements->setModel(Etmp.afficher());
 }
 
 MainWindow::~MainWindow()
@@ -28,83 +33,103 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_ajout_rev_clicked()
 {
-    int id_equipement=ui->id_equipement->text().toInt();
-        QString marque=ui->marque->text();
-         QString model=ui->model->text();
-         QString prix=ui->prix->text();
-         QString etat=ui->etat->text();
-         QString disponibilite=ui->disponibilite->text();
-        equipements e(id_equipement,marque,model,prix,etat,disponibilite);
-        bool test=e.ajouter();
+    int ID_REV=ui->ID_REV->text().toInt();
+    int CONSOMATION=ui->CONSOMATION->text().toInt();
+    int REV_SPONSOR=ui->REV_SPONSOR->text().toInt();
+    int REV_ABON=ui->REV_ABON->text().toInt();
+    QDate DATE_REV =ui->DATE_REV->date();
+    revenues r(ID_REV,CONSOMATION,REV_SPONSOR,REV_ABON,DATE_REV);
+    bool test=r.ajout_rev();
+    QMessageBox msgbox;
 
-        QMessageBox msgbox;
+     if(test)
+       return msgbox.setText("Ajout avec succes");
+    else
+       return msgbox.setText("Echec d ajout");
+    msgbox.exec();
 
-        if(!test)
-          return  msgbox.setText("Ajout avec succes");
-        else
-           return msgbox.setText("Echec d ajout");
-        msgbox.exec();
-}
-
-void MainWindow::on_pushButton_3_clicked()
-{
-    equipements e1;
-       e1.setid_equipement(ui->id_equipement_2->text().toInt());
-       bool test=e1.supprimer(e1.getid_equipement());
-       QMessageBox msgbox;
-       if(!test)
-          return msgbox.setText("Suppression avec succes");
-       else
-          return msgbox.setText("Echec de suppression");
-       msgbox.exec();
 }
 
 
-
-
-
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_ref_rev_clicked()
 {
-    ui->tab_equipements->setModel(Etmp.afficher());
+    ui->tab_rev->setModel(re.afficher());
+}
+
+void MainWindow::on_supp_rev_clicked()
+{
+    revenues re1;
+   re1.setID_REV(ui->ID_REV2->text().toInt());
+   bool test=re1.supprimer(re1.getID_REV());
+   QMessageBox msgbox;
+   if(test)
+     return  msgbox.setText("Suppression avec succes");
+   else
+      return msgbox.setText("Echec de suppression");
+   msgbox.exec();
 }
 
 
-void MainWindow::on_pushButton_4_clicked()
+
+void MainWindow::on_modifier_clicked()
 {
-    int id_service=ui->id_service->text().toInt();
-        QString nom_service=ui->nom_service->text();
-         int nbre_materiel=ui->nbre_materiel->text().toInt();
-         QString type=ui->type->text();
+    modifier m;
+    QMessageBox msg;
+   m.setID_REV(ui->ID_REV3->text().toInt());
+   if(ui->ID_REV3->text().isEmpty())
+      msg.setText("empty");
 
-        services e(id_service,nom_service,nbre_materiel,type);
-        bool test=e.ajouter();
+    else
+    m.exec();
 
-        QMessageBox msgbox;
-
-        if(!test)
-          return  msgbox.setText("Ajout avec succes");
-        else
-           return msgbox.setText("Echec d ajout");
-        msgbox.exec();
 }
 
-void MainWindow::on_pushButton_5_clicked()
+void MainWindow::on_ajout_dep_clicked()
 {
-    services e1;
-       e1.setid_service(ui->id_service_2->text().toInt());
-       bool test=e1.supprimer(e1.getid_service());
-       QMessageBox msgbox;
-       if(!test)
-          return msgbox.setText("Suppression avec succes");
-       else
-          return msgbox.setText("Echec de suppression");
-       msgbox.exec();
+    int ID_DEP=ui->ID_DEP->text().toInt();
+    int ACHAT=ui->ACHAT->text().toInt();
+    int SALAIRE=ui->SALAIRE->text().toInt();
+    int SOMME=ui->SOMME->text().toInt();
+    QDate DATE_REV =ui->DATE_REV->date();
+    depenses d(ID_DEP,ACHAT,SALAIRE,SOMME,DATE_REV);
+  bool test=d.ajout_dep();
+    QMessageBox msgbox;
+
+    if(!test)
+         return msgbox.setText("Ajout avec succes");
+    else
+        return msgbox.setText("Echec d ajout");
+    msgbox.exec();
 }
 
-void MainWindow::on_pushButton_6_clicked()
+void MainWindow::on_ref_dep_clicked()
 {
-    ui->tab_service->setModel(Etmp1.afficher());
+    ui->tab_dep->setModel(de.afficher());
+}
+
+void MainWindow::on_mod_dep_clicked()
+{
+    modifier2 dm;
+    QMessageBox msg;
+   dm.setID_DEP(ui->ID_DEP3->text().toInt());
+   if(ui->ID_DEP3->text().isEmpty())
+         msg.setText("empty");
+
+    else
+    dm.exec();
+}
+
+void MainWindow::on_supp_dep_clicked()
+{
+    depenses de1;
+   de1.setID_DEP(ui->ID_DEP2->text().toInt());
+   bool test=de1.supprimer(de1.getID_DEP());
+   QMessageBox msgbox;
+   if(test)
+      return msgbox.setText("Suppression avec succes");
+   else
+       return msgbox.setText("Echec de suppression");
+   msgbox.exec();
 }
