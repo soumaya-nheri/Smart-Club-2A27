@@ -13,8 +13,8 @@
 #include "modifierprogrammes.h"
 #include "QTextStream"
 #include "QTextDocument"
-#include "Qprinter"
-#include "Qprintdialog"
+#include <QPrinter>
+#include <QPrintDialog>
 #include<QSqlRecord>
 #include<QSqlRelationalTableModel>
 
@@ -73,6 +73,20 @@ CoachProgram::CoachProgram(QWidget *parent) :
                           while (querr.next()) {
                                 ui->mail->addItem(querr.value(groupmail).toString());
         }
+                          QSqlQuery quers;
+                              quers.prepare("SELECT Nom FROM Coach");
+                              quers.exec();
+                              quers.first();
+                              int groupnom= quers.record().indexOf("Nom");
+                               ui->nomcombo->addItem(quers.value(0).toString());
+                              while (quers.next()) {
+                                    ui->nomcombo->addItem(quers.value(groupnom).toString());
+            }
+                              ui->ABPR->addItem("1");
+
+                              ui->ABPR->addItem("0");
+
+
 }
 CoachProgram::~CoachProgram()
 {
@@ -88,7 +102,7 @@ void CoachProgram::on_Ajouter1_clicked()
     QString Specialite=ui->Specialite->text();
     QDate Date_Naiss =ui->Date_Naiss->date();
     QString Email=ui->Email->text();
-    int AB_PR=ui->AB_PR->text().toInt();
+    int AB_PR=ui->ABPR->currentText().toInt();
     coach r(ID_Coach,Nom,Prenom,Specialite,Date_Naiss,Email,AB_PR);
     bool test=r.Ajouter1();
     QMessageBox msgbox;
@@ -112,6 +126,26 @@ void CoachProgram::on_Ajouter1_clicked()
 
 void CoachProgram::on_Afficher1_clicked()
 {
+    ui->nomcombo->clear();
+    QSqlQuery quers;
+        quers.prepare("SELECT Nom FROM Coach");
+        quers.exec();
+        quers.first();
+        int groupnom= quers.record().indexOf("Nom");
+         ui->nomcombo->addItem(quers.value(0).toString());
+        while (quers.next()) {
+              ui->nomcombo->addItem(quers.value(groupnom).toString());
+}
+    ui->mail->clear();
+    QSqlQuery querr;
+        querr.prepare("SELECT Email FROM Coach");
+        querr.exec();
+        querr.first();
+        int groupmail = querr.record().indexOf("Email");
+         ui->mail->addItem(querr.value(0).toString());
+        while (querr.next()) {
+              ui->mail->addItem(querr.value(groupmail).toString());
+}
     ui->ID_Coach_modf_sup->clear();
     QSqlQuery qry;
         qry.prepare("SELECT ID_Coach FROM coach ");
@@ -468,4 +502,23 @@ void CoachProgram::on_button_6_clicked()
 
     QString domainerech = ui->recherche_2->text();
            ui->tableView->setModel(re1.chercher(domainerech));
+}
+
+void CoachProgram::on_nomcombo_currentIndexChanged(const QString &arg1)
+{
+    qDebug()<<arg1;
+    QSqlQuery query;
+    query.prepare("SELECT AB_PR FROM COACH WHERE NOM='"+arg1+"'");
+    query.exec();
+    while (query.next()) {
+
+    if(query.value(0).toInt()==1){
+
+        ui->presence->setText("present");
+    }else
+
+    {
+        ui->presence->setText("absent");}
+
+}
 }

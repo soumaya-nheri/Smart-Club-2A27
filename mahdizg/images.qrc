@@ -54,5 +54,8 @@
         <file>images/images/1x/Asset 14.png</file>
         <file>images/images/1x/sal.png</file>
         <file>images/images/1x/SALAIRE.png</file>
+        <file>images/telecharger.jpg</file>
+        <file>images/ajouter.png</file>
+        <file>images/mail.png</file>
     </qresource>
 </RCC>

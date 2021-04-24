@@ -50,6 +50,8 @@ private slots:
 
     void on_button_6_clicked();
 
+    void on_nomcombo_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::CoachProgram *ui;
     coach re1;
