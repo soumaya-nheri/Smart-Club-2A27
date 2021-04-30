@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui sql
+QT       += printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,27 +29,37 @@ CONFIG+=qml_debug
 SOURCES += \
     abonnement.cpp \
     abonnes.cpp \
+    coach.cpp \
     dialog.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
     modifier_ab.cpp \
-    modifier_abt.cpp
+    modifier_abt.cpp \
+    modifiercoach.cpp \
+    modifierprogrammes.cpp \
+    programs.cpp
 
 HEADERS += \
     abonnement.h \
     abonnes.h \
+    coach.h \
     dialog.h \
         mainwindow.h \
     connection.h \
     modifier_ab.h \
-    modifier_abt.h
+    modifier_abt.h \
+    modifiercoach.h \
+    modifierprogrammes.h \
+    programs.h
 
 FORMS += \
         dialog.ui \
         mainwindow.ui \
         modifier_ab.ui \
-        modifier_abt.ui
+        modifier_abt.ui \
+        modifiercoach.ui \
+        modifierprogrammes.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
