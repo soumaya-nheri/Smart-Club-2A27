@@ -1,0 +1,62 @@
+<RCC>
+    <qresource prefix="/new/images"/>
+    <qresource prefix="/img"/>
+    <qresource prefix="/">
+        <file>images/button.png</file>
+        <file>images/dep.png</file>
+        <file>images/login2.png</file>
+        <file>images/rev.png</file>
+        <file>images/revb.png</file>
+        <file>images/depb.png</file>
+        <file>images/crud1.png</file>
+        <file>images/crud.png</file>
+        <file>images/logo.png</file>
+        <file>images/BACKGALL.png</file>
+        <file>images/newtab.png</file>
+        <file>images/WHITE.png</file>
+        <file>images/act.png</file>
+        <file>images/ajout.png</file>
+        <file>images/mod.png</file>
+        <file>images/supp.png</file>
+        <file>images/mute.png</file>
+        <file>images/unmute.png</file>
+        <file>images/music.mp3</file>
+        <file>images/REF.png</file>
+        <file>images/print.png</file>
+        <file>images/stt.png</file>
+        <file>images/reffffffffffff.png</file>
+        <file>images/backg2.png</file>
+        <file>images/backgrevdep.png</file>
+        <file>images/1x/Asset 3.png</file>
+        <file>images/1x/Asset 4.png</file>
+        <file>images/trans.png</file>
+        <file>images/label.png</file>
+        <file>images/label-calcul.png</file>
+        <file>images/ACHAT.png</file>
+        <file>images/1x/SALAIRE.png</file>
+        <file>images/1x/sal.png</file>
+        <file>images/1x/Asset 6.png</file>
+        <file>images/1x/Asset 5.png</file>
+        <file>images/1x/Asset 7.png</file>
+        <file>images/1x/Asset 8.png</file>
+        <file>images/1x/Asset 9.png</file>
+        <file>images/1x/Asset 10.png</file>
+        <file>images/1x/Asset 11.png</file>
+        <file>images/1x/Asset 12.png</file>
+        <file>images/1x/Asset 14.png</file>
+        <file>images/click.mp3</file>
+        <file>images/1x/Asset 1.png</file>
+        <file>images/1x/0.2.png</file>
+        <file>images/graph+pie+stat+icon-1320166339060690564 (1).png</file>
+        <file>images/Untitled-1 (1).png</file>
+        <file>images/menu.png</file>
+        <file>images/ph5.png</file>
+        <file>images/unnamed (1).png</file>
+        <file>images/unnamed.png</file>
+        <file>images/ph1.png</file>
+        <file>images/ph2.png</file>
+        <file>images/ph3.png</file>
+        <file>images/ph4.png</file>
+        <file>images/caissier-operant-caisse-pho-flou-abstrait_41418-137.jpg</file>
+    </qresource>
+</RCC>
