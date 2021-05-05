@@ -1,6 +1,5 @@
 #ifndef SPONSOR_H
 #define SPONSOR_H
-
 #include <QString>
 #include <QSqlQueryModel>
 
@@ -28,4 +27,5 @@ private:
    double prix_spons ;
      QString pub_spons;
 };
+
 #endif // SPONSOR_H

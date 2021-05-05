@@ -1,20 +1,20 @@
+
 #ifndef EVENEMENT_H
 #define EVENEMENT_H
 #include <QString>
 #include <QSqlQueryModel>
-#include<QDate>
 
 class Evenement
 {
 public:
     Evenement();
-    Evenement(int,QString,QString,QString,QDate,int,QString,QString);
+    Evenement(int,QString,QString,QString,QString,int,QString,QString);
     int getid();
 
     QString getlieu_event();
     QString getnom();
     QString getdescr();
-    QDate getdate();
+    QString getdate();
     void setid(int);
     QString getcat();
     void setcat(QString);
@@ -23,7 +23,7 @@ public:
     void setlieu_event(QString);
     void setnom(QString);
     void setdescr(QString);
-    void setdate(QDate);
+    void setdate(QString);
     bool ajouter();
 int getcount(QString,QString);
 int getTotal();
@@ -40,8 +40,7 @@ double pourcentage(QString,QString);
 private:
     int id,id_spons ;
 
-    QString  lieu_event,nom,descr,type,cat;
-    QDate date;
+    QString  lieu_event,nom,descr,date,type,cat;
 
 
 };
