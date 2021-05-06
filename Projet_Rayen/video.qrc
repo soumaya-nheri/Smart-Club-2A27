@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/11234.gif</file>
+        <file>../../Downloads/video-1620001938.mp4</file>
+    </qresource>
+</RCC>

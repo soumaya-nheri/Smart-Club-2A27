@@ -10,7 +10,6 @@
         <file>images/depb.png</file>
         <file>images/crud1.png</file>
         <file>images/crud.png</file>
-        <file>images/logo.png</file>
         <file>images/BACKGALL.png</file>
         <file>images/newtab.png</file>
         <file>images/WHITE.png</file>
@@ -58,5 +57,21 @@
         <file>images/ph3.png</file>
         <file>images/ph4.png</file>
         <file>images/caissier-operant-caisse-pho-flou-abstrait_41418-137.jpg</file>
+        <file>images/ASC.png</file>
+        <file>images/DESC.png</file>
+        <file>images/logo.png</file>
+        <file>images/ASCE.png</file>
+        <file>images/DESCE.png</file>
+        <file>images/logo4.png</file>
+        <file>images/folder.png</file>
+        <file>images/media-pause.png</file>
+        <file>images/media-play.png</file>
+        <file>images/media-skip-backward.png</file>
+        <file>images/media-skip-forward.png</file>
+        <file>images/media-step-backward.png</file>
+        <file>images/media-step-forward.png</file>
+        <file>images/media-stop.png</file>
+        <file>images/menu2.png</file>
+        <file>images/volume-high.png</file>
     </qresource>
 </RCC>

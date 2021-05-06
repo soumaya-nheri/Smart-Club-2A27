@@ -14,6 +14,11 @@ modifier::modifier(QWidget *parent) :
 modifier::~modifier()
 {
     delete ui;
+    ui->marque2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->model2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->etat2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    auto dv = new QDoubleValidator(0.0, 5.0, 2);
+    ui->prix2->setValidator(dv);
 }
 void modifier::setid_equipement(int id_equipement){
 QString ID_String=QString::number(id_equipement);

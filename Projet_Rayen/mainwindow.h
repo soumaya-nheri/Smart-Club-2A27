@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include<comptabilite.h>
+#include<QMediaPlayer>
+#include<QVideoWidget>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,8 +27,11 @@ private slots:
     void on_pushButton_2_clicked();
 
 
+
+
 private:
     Ui::MainWindow *ui;
      QMediaPlayer *player= new QMediaPlayer;
+
 };
 #endif // MAINWINDOW_H

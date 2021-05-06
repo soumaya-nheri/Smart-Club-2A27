@@ -28,6 +28,17 @@ public:
     QSqlQueryModel* afficher();
     bool supprimer(int);
     bool modifier (int);
+    QSqlQueryModel* tri_ACHAT();
+    QSqlQueryModel* tri_ACHATASC();
+    QSqlQueryModel* tri_SALAIREDESC();
+    QSqlQueryModel* tri_SALAIREASC();
+    QSqlQueryModel* tri_EVENTDESC();
+    QSqlQueryModel* tri_EVENTASC();
+    QSqlQueryModel* tri_datedepASC();
+    QSqlQueryModel* tri_datedepDESC();
+    QSqlQueryModel* chercher_Dep(QString);
+
+
 private:
 int ID_DEP;
 float ACHAT,SALAIRE,EVENT;

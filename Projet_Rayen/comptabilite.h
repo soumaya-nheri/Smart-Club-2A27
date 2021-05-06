@@ -104,7 +104,6 @@ private slots:
 
     void on_pushButton_44_clicked();
 
-    void on_pushButton_23_clicked();
 
     void on_pushButton_24_clicked();
 
@@ -166,6 +165,8 @@ private slots:
 
     void on_pushButton_33_clicked();
 
+    void on_pushButton_23_clicked();
+
     void on_Modifier_2_clicked();
 
     void on_Ajouter_clicked();
@@ -204,7 +205,48 @@ private slots:
 
      void on_le_recherche_2_textChanged(const QString &arg1);
 
-     void on_lineEdit_textChanged(const QString &arg1);
+     void on_pushButton_47_clicked();
+
+     void on_pushButton_48_clicked();
+
+     void on_pushButton_49_clicked();
+
+     void on_pushButton_50_clicked();
+
+     void on_pushButton_51_clicked();
+
+     void on_pushButton_52_clicked();
+
+     void on_pushButton_53_clicked();
+
+     void on_pushButton_54_clicked();
+
+     void on_pushButton_55_clicked();
+
+     void on_rech_depp_textChanged(const QString &arg1);
+
+     void on_print_2_clicked();
+
+     void on_pushButton_66_clicked();
+
+     void on_pushButton_553_clicked();
+
+     void on_pushButton_65_clicked();
+
+     void on_pushButton_64_clicked();
+
+     void on_pushButton_67_clicked();
+
+     void on_pushButton_62_clicked();
+
+     void on_pushButton_63_clicked();
+
+     void on_pushButton_58_clicked();
+
+
+     void on_rech_depp_2_textChanged(const QString &arg1);
+
+     void on_pushButton_68_clicked();
 
 private:
 

@@ -83,4 +83,106 @@ bool depenses::modifier(int ID_DEP)
 
 }
 
+QSqlQueryModel* depenses::tri_ACHAT(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM depenses Order By ACHAT DESC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_DEP"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("ACHAT"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("SALAIRE"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("EVENT"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_DEP"));
 
+
+    return model;
+}
+QSqlQueryModel* depenses::tri_ACHATASC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM depenses Order By ACHAT ASC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_DEP"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("ACHAT"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("SALAIRE"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("EVENT"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_DEP"));
+
+
+    return model;
+}
+QSqlQueryModel* depenses::tri_SALAIREDESC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM depenses Order By SALAIRE DESC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_DEP"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("ACHAT"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("SALAIRE"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("EVENT"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_DEP"));
+
+
+    return model;
+}
+QSqlQueryModel* depenses::tri_SALAIREASC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM depenses Order By SALAIRE ASC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_DEP"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("ACHAT"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("SALAIRE"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("EVENT"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_DEP"));
+
+
+    return model;
+}
+QSqlQueryModel* depenses::tri_EVENTDESC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM depenses Order By EVENT DESC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_DEP"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("ACHAT"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("SALAIRE"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("EVENT"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_DEP"));
+
+
+    return model;
+}
+QSqlQueryModel* depenses::tri_EVENTASC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM depenses Order By EVENT ASC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_DEP"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("ACHAT"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("SALAIRE"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("EVENT"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_DEP"));
+
+
+    return model;
+}
+QSqlQueryModel* depenses::tri_datedepDESC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM depenses Order By DATE_DEP DESC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_DEP"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("ACHAT"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("SALAIRE"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("EVENT"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_DEP"));
+
+
+    return model;
+}
+QSqlQueryModel* depenses::tri_datedepASC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM depenses Order By DATE_DEP ASC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_DEP"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("ACHAT"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("SALAIRE"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("EVENT"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_DEP"));
+
+
+    return model;
+}
+QSqlQueryModel * depenses ::chercher_Dep(QString word)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+    QString w= "select * from depenses where ID_DEP like '%"+word+"%' or ACHAT like '%"+word+"%' or SALAIRE like '%"+word+"%' or EVENT like '%"+word+"%'";
+    model->setQuery(w);
+    return model;
+}

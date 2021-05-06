@@ -42,17 +42,34 @@ comptabilite::comptabilite(QWidget *parent) :
 {
 
     ui->setupUi(this);
+
     ui->formLayout_2->addWidget(affichestat());
     ui->ID_Coach_2->setValidator( new QIntValidator(0, 9999, this));
     ui->ID_Planning_2->setValidator( new QIntValidator(0, 9999, this));
     ui->Numero_Sem_2->setValidator( new QIntValidator(0, 9999, this));
     ui->NB_reservation_2->setValidator( new QIntValidator(0, 9999, this));
     ui->Numero_Sem_2->setValidator( new QIntValidator(0, 9999, this));
+    ui->nbre_materiel->setValidator( new QIntValidator(0, 9999, this));
 
     ui->Nom_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
     ui->Prenom_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
     ui->Nom_Coach_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
     ui->Specialite_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->marque->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->model->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->etat->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->nom_service->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->type->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+
+    auto dv = new QDoubleValidator(0.0, 5.0, 2);
+    ui->REV_ABON->setValidator(dv);
+     ui->REV_SPONSOR->setValidator(dv);
+     ui->ACHAT->setValidator(dv);
+      ui->salaire->setValidator(dv);
+      ui->event->setValidator(dv);
+      ui->prix->setValidator(dv);
+    ui->ID_DEP->setValidator( new QIntValidator(0, 9999, this));
+    ui->ID_REV->setValidator( new QIntValidator(0, 9999, this));
 
     qsrand(qrand());
       ui->ID_Coach_2->setText(QString::number(qrand() % ((High + 1) - Low) + Low));
@@ -129,16 +146,6 @@ comptabilite::comptabilite(QWidget *parent) :
       }
 
 
-    QRegExp rx("[A-Za-z_ ]+");//[A-Za-z0-9_]
-                QRegExp rx1("[0-9_]+");
-
-                QValidator *validator = new QRegExpValidator(rx, this);
-
-                ui->marque->setValidator(validator);
-                    ui->model->setValidator(validator);
-                    ui->prix->setValidator(validator);
-                    ui->etat->setValidator(validator);
-                    ui->disponibilite->setValidator(validator);
 
         ui->tab_equipements->setModel(Etmp.afficher());
 
@@ -154,15 +161,8 @@ comptabilite::comptabilite(QWidget *parent) :
         Animation->start();
     ui->tab_rev->setModel(re.afficher());
  ui->tab_dep->setModel(de.afficher());
- auto dv = new QDoubleValidator(0.0, 5.0, 2);
+
  ui->CONSOMATION->setValidator(dv);
-  ui->REV_ABON->setValidator(dv);
-   ui->REV_SPONSOR->setValidator(dv);
-   ui->ACHAT->setValidator(dv);
-    ui->salaire->setValidator(dv);
-    ui->event->setValidator(dv);
-  ui->ID_DEP->setValidator( new QIntValidator(0, 9999, this));
-  ui->ID_REV->setValidator( new QIntValidator(0, 9999, this));
   High = 9999;
   Low = 0;
   qsrand(qrand());
@@ -932,11 +932,10 @@ void comptabilite::on_pushButton_15_clicked()
     series->append(dep,ch_dep);
     QPieSlice *slice0 = series->slices().at(0);
     slice0->setLabelVisible();
-    slice0->setPen(QPen(Qt::darkBlue, 2));
     slice0->setBrush(Qt::blue);
     QPieSlice *slice1 = series->slices().at(1);
     slice1->setLabelVisible();
-    slice1->setPen(QPen(Qt::darkGreen, 2));
+    slice1->setPen(QPen(Qt::darkGreen, 4));
     slice1->setBrush(Qt::green);
     QChart *chart = new QChart();
     chart->setWindowTitle("STATISTIQUES GLOBAL");
@@ -988,11 +987,10 @@ void comptabilite::on_pushButton_13_clicked()
     series->append(dep,ch_dep);
     QPieSlice *slice0 = series->slices().at(0);
     slice0->setLabelVisible();
-    slice0->setPen(QPen(Qt::darkBlue, 2));
+    slice0->setPen(QPen(Qt::darkBlue, 4));
     slice0->setBrush(Qt::blue);
     QPieSlice *slice1 = series->slices().at(1);
     slice1->setLabelVisible();
-    slice1->setPen(QPen(Qt::darkGreen, 2));
     slice1->setBrush(Qt::green);
     QChart *chart = new QChart();
     chart->setWindowTitle("STATISTIQUES GLOBAL");
@@ -1180,6 +1178,8 @@ void comptabilite::on_pushButton_19_clicked()
         chartView->setRenderHint(QPainter::Antialiasing);
         chartView->resize(800,500);
         chartView->show();
+        chartView->activateWindow();
+        chartView->raise();
 }
 
 void comptabilite::on_pushButton_20_clicked()
@@ -2123,9 +2123,9 @@ void comptabilite::on_pushButton_42_clicked()
          E1.setdate(dateString);
          QString cat=ui->cb_categorie_update_2->currentText();
          QString type=ui->cb_type_update_2->currentText();
-         E.setcat(cat);
-         E.settype(type);
-        bool test=E.update(E1);
+         E1.setcat(cat);
+         E1.settype(type);
+        bool test=E1.update(E1);
         QMessageBox msg1;
         if(test)
         {  msg1.setText("update avec succés");
@@ -2318,4 +2318,223 @@ void comptabilite::on_le_recherche_2_textChanged(const QString &arg1)
     QString rech=ui->le_recherche_2->text();
 
      ui->tableevent_2->setModel(E.afficher_by_recherche(rech));
+}
+
+void comptabilite::on_pushButton_47_clicked()
+{
+   ui->tab_dep->setModel(de.tri_ACHAT());
+
+}
+
+void comptabilite::on_pushButton_48_clicked()
+{
+    ui->tab_dep->setModel(de.tri_ACHATASC());
+
+}
+
+void comptabilite::on_pushButton_49_clicked()
+{
+    ui->tab_dep->setModel(de.tri_SALAIREDESC());
+}
+
+void comptabilite::on_pushButton_50_clicked()
+{
+    ui->tab_dep->setModel(de.tri_SALAIREASC());
+
+}
+
+void comptabilite::on_pushButton_51_clicked()
+{
+    ui->tab_dep->setModel(de.tri_EVENTDESC());
+}
+
+void comptabilite::on_pushButton_52_clicked()
+{
+    ui->tab_dep->setModel(de.tri_EVENTASC());
+}
+
+void comptabilite::on_pushButton_53_clicked()
+{
+    ui->tab_dep->setModel(de.tri_datedepDESC());
+
+}
+
+void comptabilite::on_pushButton_54_clicked()
+{
+    ui->tab_dep->setModel(de.tri_datedepASC());
+}
+
+void comptabilite::on_pushButton_55_clicked()
+{
+ui->stackedWidget->setCurrentIndex(6);
+}
+
+void comptabilite::on_rech_depp_textChanged(const QString &arg1)
+{
+    QString domainerech = ui->rech_depp->text();
+           ui->tab_dep->setModel(de.chercher_Dep(domainerech));
+}
+
+void comptabilite::on_print_2_clicked()
+{
+    QMediaPlayer *son;
+        son=new QMediaPlayer();
+        son->setMedia(QUrl("qrc:/images/click.mp3"));
+        son->setVolume(50);
+        son->play();
+    QString strStream;
+            QTextStream out(&strStream);
+
+
+            const int rowCount = ui->tab_rev->model()->rowCount();
+            const int columnCount = ui->tab_rev->model()->columnCount();
+
+
+            out <<  "<html>\n"
+                        "<head>\n"
+
+                     <<  QString("<title>%1</title>\n").arg("col1")
+                      <<  "</head>\n"
+                          "<center><h1> SMART CLUB</h1></center>"
+
+                          "  <h2>TABLE DES REVENUES</h2>"
+                          "<body   >\n"
+                          "<table border=1 cellspacing=0 cellpadding=2 >\n";
+
+            // headers
+            out << "<thead><tr >";
+                for (int column = 0; column < columnCount; column++)
+                    if (!ui->tab_rev->isColumnHidden(column))
+                        out << QString("<th>%1</th>").arg(ui->tab_rev->model()->headerData(column, Qt::Horizontal).toString());
+                out << "</tr></thead>\n";
+
+            // data table
+            for (int row = 0; row < rowCount; row++) {
+                out << "<tr>";
+                for (int column = 0; column < columnCount; column++) {
+                    if (!ui->tab_rev->isColumnHidden(column)) {
+                        QString data = ui->tab_rev->model()->data(ui->tab_dep->model()->index(row, column)).toString().simplified();
+                        out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                    }
+                }
+                out << "</tr>\n";
+            }
+            out <<  "</table>\n"
+                "</body>\n"
+                "</html>\n";
+            QTextDocument *document = new QTextDocument();
+            document->setHtml(strStream);
+
+            QPrinter printer;
+
+            QPrintDialog *dialog = new QPrintDialog(&printer, NULL);
+            if (dialog->exec() == QDialog::Accepted) {
+                document->print(&printer);
+            }
+}
+
+void comptabilite::on_pushButton_66_clicked()
+{
+    ui->tab_rev->setModel(re.tri_CONSOMATIONDESC());
+}
+
+void comptabilite::on_pushButton_553_clicked()
+{
+ui->tab_rev->setModel(re.tri_CONSOMATIONASC());
+}
+
+void comptabilite::on_pushButton_65_clicked()
+{
+    ui->tab_rev->setModel(re.tri_REV_SPONSORDESC());
+
+}
+
+void comptabilite::on_pushButton_64_clicked()
+{
+    ui->tab_rev->setModel(re.tri_REV_SPONSORASC());
+
+}
+
+void comptabilite::on_pushButton_67_clicked()
+{
+    ui->tab_rev->setModel(re.tri_REV_ABONDESC());
+
+}
+
+void comptabilite::on_pushButton_62_clicked()
+{
+    ui->tab_rev->setModel(re.tri_REV_ABONASC());
+
+}
+
+void comptabilite::on_pushButton_63_clicked()
+{
+    ui->tab_rev->setModel(re.tri_DATE_REVDESC());
+
+}
+
+void comptabilite::on_pushButton_58_clicked()
+{
+    ui->tab_rev->setModel(re.tri_DATE_REVASC());
+
+}
+
+
+void comptabilite::on_rech_depp_2_textChanged(const QString &arg1)
+{
+    QString domainerech = ui->rech_depp_2->text();
+           ui->tab_rev->setModel(re.chercher_rev(domainerech));
+}
+
+void comptabilite::on_pushButton_68_clicked()
+{
+    QString strStream;
+            QTextStream out(&strStream);
+
+
+            const int rowCount = ui->tableevent_2->model()->rowCount();
+            const int columnCount = ui->tableevent_2->model()->columnCount();
+
+
+            out <<  "<html>\n"
+                        "<head>\n"
+
+                     <<  QString("<title>%1</title>\n").arg("col1")
+                      <<  "</head>\n"
+                          "<center><h1> SMART CLUB</h1></center>"
+
+                          "  <h2>TABLE DES EVENEMENTS</h2>"
+                          "<body   >\n"
+                          "<table border=1 cellspacing=0 cellpadding=2 >\n";
+
+            // headers
+            out << "<thead><tr >";
+                for (int column = 0; column < columnCount; column++)
+                    if (!ui->tableevent_2->isColumnHidden(column))
+                        out << QString("<th>%1</th>").arg(ui->tableevent_2->model()->headerData(column, Qt::Horizontal).toString());
+                out << "</tr></thead>\n";
+
+            // data table
+            for (int row = 0; row < rowCount; row++) {
+                out << "<tr>";
+                for (int column = 0; column < columnCount; column++) {
+                    if (!ui->tableevent_2->isColumnHidden(column)) {
+                        QString data = ui->tab_rev->model()->data(ui->tableevent_2->model()->index(row, column)).toString().simplified();
+                        out << QString("<td bkcolor=0>%1</td>").arg((!data.isEmpty()) ? data : QString("&nbsp;"));
+                    }
+                }
+                out << "</tr>\n";
+            }
+            out <<  "</table>\n"
+                "</body>\n"
+                "</html>\n";
+            QTextDocument *document = new QTextDocument();
+            document->setHtml(strStream);
+
+            QPrinter printer;
+
+            QPrintDialog *dialog = new QPrintDialog(&printer, NULL);
+            if (dialog->exec() == QDialog::Accepted) {
+                document->print(&printer);
+}
 }

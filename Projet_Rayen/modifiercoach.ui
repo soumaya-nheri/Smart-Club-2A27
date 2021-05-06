@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>modifier coach</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Desktop/New folder/favicon.ico</normaloff>../../Desktop/New folder/favicon.ico</iconset>
   </property>
   <widget class="QLabel" name="label_15">
    <property name="geometry">

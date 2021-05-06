@@ -8,6 +8,9 @@ modifiers::modifiers(QWidget *parent) :
     ui(new Ui::modifiers)
 {
     ui->setupUi(this);
+    ui->nbre_materiel2->setValidator( new QIntValidator(0, 9999, this));
+    ui->nom_service2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->type2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
 }
 
 modifiers::~modifiers()

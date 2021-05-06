@@ -16,7 +16,11 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Login</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Desktop/New folder/favicon.ico</normaloff>../../Desktop/New folder/favicon.ico</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -121,13 +125,13 @@ color: white</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>0</y>
       <width>141</width>
       <height>91</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/images/logo.png);</string>
+     <string notr="true">border-image: url(:/images/logo4.png);</string>
     </property>
     <property name="text">
      <string/>

@@ -6,7 +6,7 @@
 #include<QMessageBox>
 #include<QMediaPlayer>
 #include<QSoundEffect>
-
+#include"dialog.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -73,5 +73,6 @@ void MainWindow::on_pushButton_2_clicked()
     player->setVolume(100);
     player->play();
 }
+
 
 

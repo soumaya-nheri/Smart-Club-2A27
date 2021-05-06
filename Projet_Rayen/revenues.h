@@ -28,6 +28,15 @@ public:
     QSqlQueryModel* afficher();
     bool supprimer(int);
     bool modifier (int);
+    QSqlQueryModel* tri_CONSOMATIONDESC();
+    QSqlQueryModel* tri_CONSOMATIONASC();
+    QSqlQueryModel* tri_REV_SPONSORDESC();
+    QSqlQueryModel* tri_REV_SPONSORASC();
+    QSqlQueryModel* tri_REV_ABONDESC();
+    QSqlQueryModel* tri_REV_ABONASC();
+    QSqlQueryModel* tri_DATE_REVDESC();
+    QSqlQueryModel* tri_DATE_REVASC();
+    QSqlQueryModel* chercher_rev(QString);
 private:
     int ID_REV;
     float CONSOMATION,REV_SPONSOR,REV_ABON;

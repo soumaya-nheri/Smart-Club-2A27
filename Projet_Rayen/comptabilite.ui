@@ -16,7 +16,11 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Sport Management</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Desktop/New folder/favicon.ico</normaloff>../../Desktop/New folder/favicon.ico</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-image: url(:/images/backg2.png);
@@ -426,9 +430,9 @@ background-color: rgb(255, 255, 255);</string>
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>40</y>
+         <y>20</y>
          <width>811</width>
-         <height>281</height>
+         <height>301</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -521,7 +525,7 @@ radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>50</y>
+         <y>20</y>
          <width>16</width>
          <height>16</height>
         </rect>
@@ -667,8 +671,8 @@ radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
       <widget class="QPushButton" name="print">
        <property name="geometry">
         <rect>
-         <x>770</x>
-         <y>40</y>
+         <x>780</x>
+         <y>20</y>
          <width>41</width>
          <height>41</height>
         </rect>
@@ -869,8 +873,8 @@ color:white;
        </property>
        <property name="geometry">
         <rect>
-         <x>380</x>
-         <y>530</y>
+         <x>370</x>
+         <y>520</y>
          <width>113</width>
          <height>22</height>
         </rect>
@@ -886,7 +890,7 @@ color:white;
        <property name="geometry">
         <rect>
          <x>530</x>
-         <y>530</y>
+         <y>520</y>
          <width>113</width>
          <height>22</height>
         </rect>
@@ -902,7 +906,7 @@ color:white;
        <property name="geometry">
         <rect>
          <x>680</x>
-         <y>530</y>
+         <y>520</y>
          <width>113</width>
          <height>22</height>
         </rect>
@@ -931,9 +935,9 @@ color:white;
        <property name="geometry">
         <rect>
          <x>540</x>
-         <y>480</y>
+         <y>477</y>
          <width>96</width>
-         <height>28</height>
+         <height>31</height>
         </rect>
        </property>
        <property name="cursor">
@@ -972,9 +976,9 @@ radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
        <property name="geometry">
         <rect>
          <x>390</x>
-         <y>480</y>
+         <y>477</y>
          <width>96</width>
-         <height>28</height>
+         <height>31</height>
         </rect>
        </property>
        <property name="cursor">
@@ -1013,9 +1017,9 @@ radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
        <property name="geometry">
         <rect>
          <x>690</x>
-         <y>480</y>
+         <y>477</y>
          <width>96</width>
-         <height>28</height>
+         <height>31</height>
         </rect>
        </property>
        <property name="cursor">
@@ -1100,9 +1104,9 @@ color:white;
        <property name="geometry">
         <rect>
          <x>490</x>
-         <y>560</y>
+         <y>550</y>
          <width>201</width>
-         <height>31</height>
+         <height>41</height>
         </rect>
        </property>
        <property name="cursor">
@@ -1224,12 +1228,172 @@ color:white;
         <string>Calculer vos depesnses</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="reche_dep">
+      <widget class="QPushButton" name="pushButton_47">
        <property name="geometry">
         <rect>
-         <x>600</x>
-         <y>10</y>
-         <width>131</width>
+         <x>160</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/ASCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_48">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/DESCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_49">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/ASCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_50">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/DESCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_51">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/ASCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_52">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/DESCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_53">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/ASCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_54">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>20</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/DESCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="rech_depp">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>340</y>
+         <width>121</width>
          <height>21</height>
         </rect>
        </property>
@@ -1237,13 +1401,13 @@ color:white;
         <string notr="true">border-image: url(:/images/WHITE.png);</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_89">
+      <widget class="QLabel" name="label_90">
        <property name="geometry">
         <rect>
-         <x>460</x>
-         <y>0</y>
+         <x>290</x>
+         <y>340</y>
          <width>131</width>
-         <height>31</height>
+         <height>21</height>
         </rect>
        </property>
        <property name="font">
@@ -1257,7 +1421,7 @@ color:white;
 </string>
        </property>
        <property name="text">
-        <string>Recherche</string>
+        <string>Recherche:</string>
        </property>
       </widget>
      </widget>
@@ -2057,6 +2221,223 @@ color:white;
        </property>
        <property name="text">
         <string>Statistiques</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="print_2">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>10</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image:url(:/images/WHITE.png);
+border-image:url(:/images/print.png);
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_553">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>10</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/DESCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_58">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>10</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/DESCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_62">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>10</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/DESCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_63">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>10</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/ASCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_64">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>10</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/DESCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_65">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>10</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/ASCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_66">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>10</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/ASCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_67">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>10</y>
+         <width>21</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/ASCE.png);
+background-image:url(:/images/WHITE.png)</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_91">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>340</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color:#ffffff;
+color:white;
+</string>
+       </property>
+       <property name="text">
+        <string>Recherche:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="rech_depp_2">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>340</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/WHITE.png);</string>
        </property>
       </widget>
      </widget>
@@ -2887,6 +3268,9 @@ radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
        <property name="styleSheet">
         <string notr="true">border-image: url(:/images/WHITE.png);</string>
        </property>
+       <property name="placeholderText">
+        <string>abcdef</string>
+       </property>
       </widget>
       <widget class="QLabel" name="label_5">
        <property name="geometry">
@@ -3059,6 +3443,9 @@ color:rgb(255, 255, 255)</string>
        <property name="styleSheet">
         <string notr="true">border-image: url(:/images/WHITE.png);</string>
        </property>
+       <property name="placeholderText">
+        <string>abcdef</string>
+       </property>
       </widget>
       <widget class="QPushButton" name="pushButton_17">
        <property name="geometry">
@@ -3114,6 +3501,9 @@ radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
        <property name="styleSheet">
         <string notr="true">border-image: url(:/images/WHITE.png);</string>
        </property>
+       <property name="placeholderText">
+        <string>abcdef</string>
+       </property>
       </widget>
       <widget class="QLabel" name="label_6">
        <property name="geometry">
@@ -3151,6 +3541,9 @@ color:rgb(255, 255, 255)</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border-image: url(:/images/WHITE.png);</string>
+       </property>
+       <property name="placeholderText">
+        <string>abcdef</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_8">
@@ -3214,6 +3607,9 @@ color:rgb(255, 255, 255)</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border-image: url(:/images/WHITE.png);</string>
+       </property>
+       <property name="placeholderText">
+        <string>1234</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_24">
@@ -3672,6 +4068,9 @@ radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
        <property name="styleSheet">
         <string notr="true">border-image: url(:/images/WHITE.png);</string>
        </property>
+       <property name="placeholderText">
+        <string>1234</string>
+       </property>
       </widget>
       <widget class="QLabel" name="label_30">
        <property name="geometry">
@@ -3735,6 +4134,9 @@ color:rgb(255, 255, 255)</string>
        <property name="styleSheet">
         <string notr="true">border-image: url(:/images/WHITE.png);</string>
        </property>
+       <property name="placeholderText">
+        <string>abcdef</string>
+       </property>
       </widget>
       <widget class="QLineEdit" name="nom_service">
        <property name="geometry">
@@ -3747,6 +4149,9 @@ color:rgb(255, 255, 255)</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border-image: url(:/images/WHITE.png);</string>
+       </property>
+       <property name="placeholderText">
+        <string>abcdef</string>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton_24">
@@ -4238,7 +4643,7 @@ radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
       <string notr="true">background-image:url(:/images/1x/0.2.png);</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_13">
       <attribute name="title">
@@ -5522,7 +5927,7 @@ radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
       <string notr="true">background-image: url(:/images/1x/0.2.png);</string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab_8">
       <attribute name="title">
@@ -6824,6 +7229,115 @@ radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
        </property>
        <property name="text">
         <string>Modifier Event</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_55">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>570</y>
+         <width>151</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
+       </property>
+       <property name="text">
+        <string>statistique</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_89">
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>400</y>
+         <width>171</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+border-image: url(:/images/Untitled-1 (1).png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_92">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>400</y>
+         <width>171</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/images/graph+pie+stat+icon-1320166339060690564 (1).png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_68">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>570</y>
+         <width>151</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: #ffffff;
+border: 0px solid ;
+font: 10pt &quot;Segoe UI Black&quot;;
+border-radius: 26px;
+padding: 5px;
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #1E73E8, stop: 1 #1E73E8);
+min-width: 80px;
+}
+
+QPushButton:hover {
+background: qradialgradient(cx: 0.3, cy: -0.4,
+fx: 0.3, fy: -0.4,
+radius: 1.65, stop: 0 #5E9DF5, stop: 1 #5E9DF5);
+}
+
+ QPushButton:pressed {
+background: qradialgradient(cx: 0.4, cy: -0.1,
+fx: 0.4, fy: -0.1,
+radius: 1.65, stop: 0 #0936F5, stop: 1 #0936F5);
+}</string>
+       </property>
+       <property name="text">
+        <string>Pdf</string>
        </property>
       </widget>
      </widget>

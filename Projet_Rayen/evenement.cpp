@@ -5,10 +5,10 @@
 #include <qsqlerror.h>
 Evenement::Evenement()
 {
-    id=0;lieu_event=""; nom="";descr="";date="";
+    id=0;lieu_event=""; nom="";descr="";date=QDate::currentDate();
 
 }
-Evenement::Evenement(int id,QString lieu_event,QString nom,QString descr,QString date,int id_spons,QString cat,QString type)
+Evenement::Evenement(int id,QString lieu_event,QString nom,QString descr,QDate date,int id_spons,QString cat,QString type)
 {this->id=id;this->lieu_event=lieu_event;this->nom=nom;this->descr=descr;this->id_spons=id_spons;
     this->type=type;this->cat=cat;
 this->date=date;
@@ -18,13 +18,13 @@ this->date=date;
         QString Evenement:: getlieu_event() {return lieu_event;}
         QString Evenement::getnom(){return nom;}
         QString Evenement::getdescr(){return descr;}
-        QString Evenement::getdate(){return date;}
+        QDate Evenement::getdate(){return date;}
         void Evenement:: setid(int id){this->id=id;}
 
 void  Evenement::setlieu_event(QString lieu_event){this->lieu_event=lieu_event;}
 void Evenement:: setnom(QString nom){this->nom=nom;}
 void Evenement:: setdescr(QString descr){this->descr=descr;}
-void Evenement:: setdate(QString date){this->date=date;}
+void Evenement:: setdate(QDate date){this->date=date;}
 QString Evenement::getcat(){return  cat;}
 void Evenement::setcat(QString cat){this->cat=cat;}
 QString Evenement::gettype(){return  type;}
@@ -107,7 +107,7 @@ query.exec();
       {
       QString nom_string= query.value(1).toString();
        QString lieu_string= query.value(2).toString();
-        QString date_string= query.value(3).toString();
+        QDate date_string= query.value(3).toDate();
        QString descr_string= query.value(4).toString();
  QString cat= query.value(6).toString();
   QString type= query.value(7).toString();
@@ -116,6 +116,7 @@ query.exec();
        E->setnom( nom_string);
        E->setlieu_event(lieu_string);
       E->setdescr( descr_string);
+
       E->setdate(date_string);
       E->setcat(cat);
 
@@ -173,7 +174,7 @@ int  Evenement::getcount(QString cat, QString type)
 
 
     QSqlQuery query;
-      qDebug() <<"hello";
+
 
          query.prepare("SELECT count(*) FROM evenement where categorie=:cat and type=:type");
    query.bindValue(":cat", cat);
@@ -198,7 +199,7 @@ int Evenement::getTotal()
 
 
     QSqlQuery query;
-      qDebug() <<"hello";
+
 
          query.prepare("SELECT count(*) FROM evenement ");
 

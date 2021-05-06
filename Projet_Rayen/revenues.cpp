@@ -80,3 +80,107 @@ bool revenues::modifier(int ID_REV)
     return query.exec();
 
 }
+QSqlQueryModel* revenues::tri_CONSOMATIONDESC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM Revenues Order By CONSOMATION DESC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_REV"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("CONSOMATION"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("REV_SPONSOR"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("REV_ABON"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_REV"));
+
+
+    return model;
+}
+QSqlQueryModel* revenues::tri_CONSOMATIONASC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM Revenues Order By CONSOMATION ASC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_REV"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("CONSOMATION"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("REV_SPONSOR"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("REV_ABON"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_REV"));
+
+
+    return model;
+}
+QSqlQueryModel* revenues::tri_REV_SPONSORDESC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM Revenues Order By REV_SPONSOR DESC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_REV"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("CONSOMATION"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("REV_SPONSOR"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("REV_ABON"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_REV"));
+
+
+    return model;
+}
+QSqlQueryModel* revenues::tri_REV_SPONSORASC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM Revenues Order By REV_SPONSOR ASC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_REV"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("CONSOMATION"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("REV_SPONSOR"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("REV_ABON"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_REV"));
+
+
+    return model;
+}
+QSqlQueryModel* revenues::tri_REV_ABONDESC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM Revenues Order By REV_ABON DESC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_REV"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("CONSOMATION"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("REV_SPONSOR"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("REV_ABON"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_REV"));
+
+
+    return model;
+}
+QSqlQueryModel* revenues::tri_REV_ABONASC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM Revenues Order By REV_ABON ASC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_REV"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("CONSOMATION"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("REV_SPONSOR"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("REV_ABON"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_REV"));
+
+
+    return model;
+}
+QSqlQueryModel* revenues::tri_DATE_REVDESC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM Revenues Order By DATE_REV DESC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_REV"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("CONSOMATION"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("REV_SPONSOR"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("REV_ABON"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_REV"));
+
+
+    return model;
+}
+QSqlQueryModel* revenues::tri_DATE_REVASC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM Revenues Order By DATE_REV ASC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_REV"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("CONSOMATION"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("REV_SPONSOR"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("REV_ABON"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_REV"));
+
+
+    return model;
+}
+
+QSqlQueryModel * revenues ::chercher_rev(QString word)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+    QString w= "select * from revenues where ID_REV like '%"+word+"%' or CONSOMATION like '%"+word+"%' or REV_SPONSOR like '%"+word+"%' or REV_ABON like '%"+word+"%'";
+    model->setQuery(w);
+    return model;
+}
