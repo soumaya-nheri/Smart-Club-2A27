@@ -45,11 +45,15 @@ comptabilite::comptabilite(QWidget *parent) :
 
     ui->formLayout_2->addWidget(affichestat());
     ui->ID_Coach_2->setValidator( new QIntValidator(0, 9999, this));
+    ui->ID_AB->setValidator( new QIntValidator(0, 9999, this));
+    ui->ID_ABT->setValidator( new QIntValidator(0, 9999, this));
+    ui->AGE->setValidator( new QIntValidator(0, 9999, this));
     ui->ID_Planning_2->setValidator( new QIntValidator(0, 9999, this));
     ui->Numero_Sem_2->setValidator( new QIntValidator(0, 9999, this));
     ui->NB_reservation_2->setValidator( new QIntValidator(0, 9999, this));
     ui->Numero_Sem_2->setValidator( new QIntValidator(0, 9999, this));
     ui->nbre_materiel->setValidator( new QIntValidator(0, 9999, this));
+    ui->le_id_spons_2->setValidator( new QIntValidator(0, 9999, this));
 
     ui->Nom_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
     ui->Prenom_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
@@ -60,6 +64,20 @@ comptabilite::comptabilite(QWidget *parent) :
     ui->etat->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
     ui->nom_service->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
     ui->type->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->TYPE->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->NOM->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->PRENOM->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->le_nom_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->le_nom_update_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->le_lieu_event_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->le_lieu_update_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->le_descr_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->le_descr_update_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->le_pub_spons_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+    ui->le_pub_update_2->setValidator(new QRegExpValidator( QRegExp("([A-Za-z_][A-Za-z]+)"), this ));
+
+
+
 
     auto dv = new QDoubleValidator(0.0, 5.0, 2);
     ui->REV_ABON->setValidator(dv);
@@ -70,7 +88,8 @@ comptabilite::comptabilite(QWidget *parent) :
       ui->prix->setValidator(dv);
     ui->ID_DEP->setValidator( new QIntValidator(0, 9999, this));
     ui->ID_REV->setValidator( new QIntValidator(0, 9999, this));
-
+    ui->le_prix_spons_2->setValidator( new QIntValidator(0, 9999, this));
+ ui->le_prix_update_2->setValidator( new QIntValidator(0, 9999, this));
     qsrand(qrand());
       ui->ID_Coach_2->setText(QString::number(qrand() % ((High + 1) - Low) + Low));
         ui->ID_Planning_2->setText(QString::number(qrand() % ((High + 1) - Low) + Low));
@@ -2537,4 +2556,65 @@ void comptabilite::on_pushButton_68_clicked()
             if (dialog->exec() == QDialog::Accepted) {
                 document->print(&printer);
 }
+}
+
+void comptabilite::on_pushButton_69_clicked()
+{
+    ui->tableView->setModel(prog.tri_NUMSEMDESC());
+
+}
+
+
+void comptabilite::on_pushButton_70_clicked()
+{
+    ui->tableView->setModel(prog.tri_NUMSEMASC());
+
+}
+
+void comptabilite::on_pushButton_71_clicked()
+{
+    ui->tableView->setModel(prog.tri_NBRESDESC());
+
+}
+
+void comptabilite::on_pushButton_72_clicked()
+{
+    ui->tableView->setModel(prog.tri_NBRESASC());
+}
+
+void comptabilite::on_pushButton_75_clicked()
+{
+    QString domainerech = ui->rech_abt->text();
+           ui->tableabt->setModel(abt.chercher_ABT(domainerech));
+}
+
+void comptabilite::on_pushButton_73_clicked()
+{
+    ui->tableabt->setModel(abt.tri_IDDESC());
+
+}
+
+void comptabilite::on_pushButton_74_clicked()
+{
+    ui->tableabt->setModel(abt.tri_IDASC());
+
+}
+
+void comptabilite::on_pushButton_76_clicked()
+{
+    ui->tableab->setModel(ab.tri_IDABDESC());
+
+}
+
+void comptabilite::on_pushButton_84_clicked()
+{
+    ui->tableab->setModel(ab.tri_IDABASC());
+
+}
+
+
+void comptabilite::on_pushButton_93_clicked()
+{
+    QString domainerech = ui->rech_abt_4->text();
+           ui->tableab->setModel(ab.chercher_AB(domainerech));
 }

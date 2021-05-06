@@ -25,6 +25,9 @@ public:
     QSqlQueryModel* afficher();
     bool supprimer(int);
     bool modifier (int);
+    QSqlQueryModel* tri_IDDESC();
+    QSqlQueryModel* tri_IDASC();
+    QSqlQueryModel* chercher_ABT(QString);
 
 private:
 int ID_ABT;

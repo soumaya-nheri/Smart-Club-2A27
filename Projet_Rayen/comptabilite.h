@@ -248,6 +248,26 @@ private slots:
 
      void on_pushButton_68_clicked();
 
+     void on_pushButton_69_clicked();
+
+     void on_pushButton_70_clicked();
+
+     void on_pushButton_71_clicked();
+
+     void on_pushButton_72_clicked();
+
+     void on_pushButton_75_clicked();
+
+     void on_pushButton_73_clicked();
+
+     void on_pushButton_74_clicked();
+
+     void on_pushButton_76_clicked();
+
+     void on_pushButton_84_clicked();
+
+     void on_pushButton_93_clicked();
+
 private:
 
     void on_tabWidget_currentChanged(int index);

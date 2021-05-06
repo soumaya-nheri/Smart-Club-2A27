@@ -68,3 +68,32 @@ bool abonnement::modifier(int ID_ABT)
     return query.exec();
 
 }
+QSqlQueryModel* abonnement::tri_IDDESC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM abonnement Order By ID_ABT DESC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_ABT"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("DATE_INS"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("TYPE"));
+
+
+    return model;
+}
+QSqlQueryModel* abonnement::tri_IDASC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM abonnement Order By ID_ABT ASC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_ABT"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("DATE_INS"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("TYPE"));
+
+
+    return model;
+}
+
+QSqlQueryModel * abonnement ::chercher_ABT(QString word)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+    QString w= "select * from abonnement where ID_ABT like '%"+word+"%' or TYPE like '%"+word+"%' ";
+    model->setQuery(w);
+    return model;
+}
+

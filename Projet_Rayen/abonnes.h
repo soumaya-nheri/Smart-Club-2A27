@@ -24,7 +24,10 @@ public:
     QSqlQueryModel* afficher();
     bool supprimer(int);
     bool modifier (int);
-    QSqlQueryModel* chercher(QString);
+    QSqlQueryModel* tri_IDABDESC();
+    QSqlQueryModel* tri_IDABASC();
+    QSqlQueryModel* chercher_AB(QString);
+
 private:
     QString NOM,PRENOM;
     int ID_AB,AGE;

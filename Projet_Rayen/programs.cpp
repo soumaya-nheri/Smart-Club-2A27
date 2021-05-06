@@ -96,3 +96,55 @@ programs::programs()
         model->setQuery(w);
         return model;
     }
+    QSqlQueryModel* programs::tri_NUMSEMDESC(){
+        QSqlQueryModel* model=new QSqlQueryModel();
+        model->setQuery("SELECT* FROM programs Order By NUMERO_SEM DESC");
+        model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_Planning"));
+        model->setHeaderData(1, Qt::Horizontal,QObject::tr("Date_Planning"));
+        model->setHeaderData(2, Qt::Horizontal,QObject::tr("Heure"));
+        model->setHeaderData(3, Qt::Horizontal,QObject::tr("Numero_Sem"));
+        model->setHeaderData(4, Qt::Horizontal,QObject::tr("NB_reservation"));
+        model->setHeaderData(5, Qt::Horizontal,QObject::tr("Nom_Coach"));
+
+
+        return model;
+    }
+    QSqlQueryModel* programs::tri_NUMSEMASC(){
+        QSqlQueryModel* model=new QSqlQueryModel();
+        model->setQuery("SELECT* FROM programs Order By NUMERO_SEM ASC");
+        model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_Planning"));
+        model->setHeaderData(1, Qt::Horizontal,QObject::tr("Date_Planning"));
+        model->setHeaderData(2, Qt::Horizontal,QObject::tr("Heure"));
+        model->setHeaderData(3, Qt::Horizontal,QObject::tr("Numero_Sem"));
+        model->setHeaderData(4, Qt::Horizontal,QObject::tr("NB_reservation"));
+        model->setHeaderData(5, Qt::Horizontal,QObject::tr("Nom_Coach"));
+
+
+        return model;
+    }
+    QSqlQueryModel* programs::tri_NBRESDESC(){
+        QSqlQueryModel* model=new QSqlQueryModel();
+        model->setQuery("SELECT* FROM programs Order By NB_RESERVATION DESC");
+        model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_Planning"));
+        model->setHeaderData(1, Qt::Horizontal,QObject::tr("Date_Planning"));
+        model->setHeaderData(2, Qt::Horizontal,QObject::tr("Heure"));
+        model->setHeaderData(3, Qt::Horizontal,QObject::tr("Numero_Sem"));
+        model->setHeaderData(4, Qt::Horizontal,QObject::tr("NB_reservation"));
+        model->setHeaderData(5, Qt::Horizontal,QObject::tr("Nom_Coach"));
+
+
+        return model;
+    }
+    QSqlQueryModel* programs::tri_NBRESASC(){
+        QSqlQueryModel* model=new QSqlQueryModel();
+        model->setQuery("SELECT* FROM programs Order By NB_RESERVATION ASC");
+        model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_Planning"));
+        model->setHeaderData(1, Qt::Horizontal,QObject::tr("Date_Planning"));
+        model->setHeaderData(2, Qt::Horizontal,QObject::tr("Heure"));
+        model->setHeaderData(3, Qt::Horizontal,QObject::tr("Numero_Sem"));
+        model->setHeaderData(4, Qt::Horizontal,QObject::tr("NB_reservation"));
+        model->setHeaderData(5, Qt::Horizontal,QObject::tr("Nom_Coach"));
+
+
+        return model;
+    }

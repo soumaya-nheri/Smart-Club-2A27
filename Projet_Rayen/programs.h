@@ -34,6 +34,10 @@ public:
     bool Supprimer2(int);
     bool Modifier2(int);
     QSqlQueryModel* chercher(QString);
+    QSqlQueryModel* tri_NUMSEMDESC();
+     QSqlQueryModel* tri_NUMSEMASC();
+      QSqlQueryModel* tri_NBRESDESC();
+       QSqlQueryModel* tri_NBRESASC();
 
 private:
 int ID_Planning,Numero_Sem,NB_reservation;

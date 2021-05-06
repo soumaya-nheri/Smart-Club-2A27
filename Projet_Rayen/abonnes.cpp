@@ -70,13 +70,33 @@ bool abonnes::modifier(int ID_AB)
     return query.exec();
 
 }
-QSqlQueryModel * abonnes ::chercher(QString word)
-{
+QSqlQueryModel* abonnes::tri_IDABDESC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM abonnes Order By ID_AB DESC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_AB"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("NOM"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("PRENOM"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("AGE"));;
 
+
+    return model;
+}
+QSqlQueryModel* abonnes::tri_IDABASC(){
+    QSqlQueryModel* model=new QSqlQueryModel();
+    model->setQuery("SELECT* FROM abonnes Order By ID_AB ASC");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_AB"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("NOM"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("PRENOM"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("AGE"));;
+
+
+    return model;
+}
+
+QSqlQueryModel * abonnes ::chercher_AB(QString word)
+{
     QSqlQueryModel * model= new QSqlQueryModel();
-    QString w= "select * from abonnes where ID_AB like '%"+word+"%' or NOM like '%"+word+"%' or PRENOM like '%"+word+"%' or AGE like '%"+word+"%'";
+    QString w= "select * from abonnement where ID_AB like '%"+word+"%' or NOM like '%"+word+"%' or PRENOM like '%"+word+"%' or AGE like '%"+word+"%' ";
     model->setQuery(w);
     return model;
-
-
 }
